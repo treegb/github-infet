@@ -1,0 +1,22 @@
+/* These lines are just copy and paste from [main css]. */
+    a:link, a:visited  {color: #007C85 ; text-decoration: none ;}    /* Main hyperlink, [weaver] or external link. */
+    .yarns-link, .yarns-link:link, .yarns-link:visited  {color: #825B17 ; text-decoration: none ;}    /* Hyperlink, [yanrs]. .[yarns-link:visited] don't effect, don't know why. */
+    .gh_1 {color: #28822A ; font-size: 1.1rem ;}    /* Highlight, teal, normal used.  __ Mark as normal highlight. */
+    .gh_2 {color: #000 ; font-size: 1.1rem ; font-style: italic ;}    /* Italic, used as quote or little special meaning, less important than [gh_1]. */
+        /* These lines are for [gh_2] perform in <a>, they sightly change the original <a> color. */
+        .gh_2:link, .gh_2:visited, a:link .gh_2, a:visited .gh_2 {color: #004F54 ;}
+        .yarns-link.gh_2, .yarns-link.gh_2:link, .yarns-link.gh_2:visited, .yarns-link .gh_2, .yarns-link:link .gh_2, .yarns-link:visited .gh_2 {color: #543500 ;}
+
+    .gh_2:after {content: " " ;}
+    .gh_3 {color: #28822A ; background-color: #EEE ; font-size: 1.1rem ;}    /* Highlight, like [gh_1] but with a little grey bg-, main title of multiple [gh_1] "children".
+    __ Used when there are too many highlight_1, and you want to emphasise the "parent" title more.*/
+    .gh_4 {color: #D63A3A ; font-size: 1.1rem ;}    /* Warning, red, indicate here might be something wrong, or mark as strong .notice ,,warning. */
+    .gh_5 {color: #D46504 ; font-size: 1.1rem ;}    /* Notice, orange, mark as notice, not to mean error or anything's going wrong. */
+    .gh_6 {font-weight: bold ;}    /* Bold, used inside <a> tag or other situation, when don't want to bother the bigger span's format. */
+
+
+/* These lines are customize part for [css_ext]. */
+.ext-note_1 {color: #D46504 !important ; font-size: 1.2rem !important ;}
+/* Larger font size, used at external site html (had downloaded), addition noted place. Used with [.gh_5] usually.  __ Need to use [rem].*/ 
+.ext-note_2 {color: #C99B73 !important ; font-size: 1.2rem !important ;}    /* Larger font size only. Used around [.ext_note] for wider span.  __ Need to use [rem].*/
+:target {background-color: #BEE5E8 !important;}
