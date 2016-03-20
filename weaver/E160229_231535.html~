@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../css/css_002.css">
+<link rel="shortcut icon" href="../images/treegb_icon.ico">
+<title>Cygwin</title>
+</head>
+
+<body>
+
+<div class="meta_1">
+    <p class="meta_2">Cygwin.</p>
+    <p class="meta_3">E160229_231535</p>
+</div>
+
+
+<div class="crd">
+    
+    <p class="pch"><a href="https://coderwall.com/p/f1ykha/open-the-file-manager-gui-from-the-command-line">Open the File Manager GUI from the Command Line.</a></p>
+    
+    <p class="pch"><a href="https://coderwall.com/p/f1ykha/open-the-file-manager-gui-from-the-command-line">Make ctrl-arrow keys move forward/backward a word at a time.</a></p>
+
+</div>
+
+</body>
+</html>

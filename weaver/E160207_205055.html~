@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../css/css_002.css">
+<link rel="shortcut icon" href="../images/treegb_icon.ico">
+<title>Database</title>
+</head>
+
+<body>
+
+<div class="meta_1">
+    <p class="meta_2">Database.</p>
+    <p class="meta_3">E160207_205055</p>
+</div>
+
+
+<div class="crd">
+    
+    <p class="pch">SQLite.&nbsp; __ <a href="https://zh.wikipedia.org/zh-tw/SQLite">wiki.</a></p>
+    
+    <p class="pch"><a href="../yarns/E160207_205511" class="yarns-link">Databases vs. Plain Text Files.</a></p>
+    
+    <p class="pch"><a href="../yarns/E160207_211700" class="yarns-link">Software is not data.</a></p>
+    
+    <p class="pch"><a href="http://electronicdesign.com/dev-tools/whats-difference-between-json-xml-and-yaml">What's the Difference Between JSON, XML, and YAML?</a></p>
+    
+    <p class="pch"><a href="http://stackoverflow.com/questions/3951047/xml-vs-yaml-vs-json?rq=1">.XML vs YAML vs JSON .Stack overflow.</a></p>
+    
+    <p class="pch"><a href="../yarns/E160208_002131" class="yarns-link">.YAML vs GPB vs JSON vs XML, which is better? .Stack overflow.</a></p>
+    
+    <p class="pch"><a href="../yarns/E160208_011527" class="yarns-link">為什麼XML這麼笨重的數據結構仍在廣泛應用？</a></p>
+    
+    <p class="pch">.Backup ,,restore mysql.</p>
+        <p>[http://webcheatsheet.com/sql/mysql_backup_restore.php].<br>
+        [http://stackoverflow.com/questions/10934745/restore-the-mysql-database-from-frm-files].<br>
+        [http://stackoverflow.com/questions/879176/how-to-recover-mysql-db-from-myd-myi-frm-files]&nbsp; < (好複雜).</p>
+
+    <p class="pch">MySQL Master-to-Master Repliction.</p>
+        <p>[https://www.howtoforge.com/mysql_master_master_replication].</p>
+
+    <p class="pch">what is .[.FRM] ,,[.MYI] ,,[.MYD]?</p>
+        <p>[http://www.mindfiresolutions.com/Physical-Mysql--what-are-these-FRM-MYI-MYD-Need-this-1587.php].</p>
+
+    <p class="pch">[mysqldump ,,mysqlhotcopy].</p>
+        <p>[https://dev.mysql.com/doc/refman/5.5/en/backup-and-recovery.html]&nbsp; < (mysql official document.)<br>
+        [http://www.thegeekstuff.com/2008/09/backup-and-restore-mysql-database-using-mysqldump/]  < (Backup and Restore MySQL Database Using mysqldump.)<br>
+        [http://stackoverflow.com/questions/10934745/restore-the-mysql-database-from-frm-files]  < (Restore the mysql database from .frm files)<br>
+        [http://webcheatsheet.com/sql/mysql_backup_restore.php]&nbsp; < (How to Back Up and Restore a MySQL Database.) (很充足.)</p>
+
+        <p>mysqldump 測試結果, 可以成功替換 table, 不須 [service mysql stop].</p>
+
+    <p class="pch">[insert ,,update ,,alter].</p>
+        <p>[http://stackoverflow.com/questions/485039/mysql-insert-where-query]<br>
+        [http://www.w3schools.com/sql/sql_alter.asp].</p>
+
+    <p class="pch">[var/lib/mysql].</p>
+        <p>mysql 更動 某 table 資料後, [var/lib/mysql] 會更新的檔案好像就只有 :</p>
+
+        <p>&nbsp;{{<br>
+        ib_logfile0<br>
+        ibdata1<br>
+        mysql/general_log.CSM<br>
+        mysql/slow_log.CSM<br>
+        &nbsp;}}</p>
+
+</div>
+
+</body>
+</html>

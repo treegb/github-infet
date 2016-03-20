@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../css/css_002.css">
+<link rel="shortcut icon" href="../images/treegb_icon.ico">
+<title>薪水.table</title>
+
+<style type="text/css">
+    .div-table { display: table ; border: 1px solid #aaa ; width: calc(100% - 40px) ;}
+    .div-row { display: table-row ;} 
+    .div-cell { display: table-cell ; border: 1px solid #aaa ; padding-left: 5px ; vertical-align: middle;}
+    .div-row:nth-child(1) .div-cell {padding-top: 10px ; padding-bottom: 10px ; font-size: 1.1 rem ;}
+    .div-cell_1 {width : 10% ; word-break: break-all ;}
+    .div-cell_2 {width : 30% ;}
+    .div-cell_3 {width : auto ;}
+    
+    .div-row:nth-child(odd) {background-color: #F0F0F0 ;}
+    .div-row:nth-child(1) {background-color: #BEE5E8 ; text-align: center}
+    :target {background-color: #BEE5E8 !important ; transition: background-color 0.5s ease ;}    /* Have to add this line agian (duplicate from link css), becasue [.div-row:nth-child(odd) overwrite it.]*/
+    :target:hover {background-color: #E9F4F5 !important;}
+</style>
+
+</head>
+
+<body>
+
+<div class="meta_1">
+    <p class="meta_2">.薪水 .table.</p>
+    <p class="meta_3">E160209_162606</p>
+</div>
+
+
+<div class="div-table div-gnl">
+    <div class="div-row">
+        <div class="div-cell div-cell_1">日期</div>
+        <div class="div-cell div-cell_2">.新水 ,, 勞保,, 健保</div>
+        <div class="div-cell div-cell_3">Detail.</div>
+    </div>
+    <div class="div-row">
+        <div class="div-cell div-cell_1">2016-02-05</div>
+        <div class="div-cell div-cell_2">薪水 TWD 24166 已收到.</div>
+        <div class="div-cell div-cell_3">照之前開會的內容, 下個月開始降薪到基本薪資.</div>
+
+    </div>
+    <div class="div-row">
+        <div class="div-cell div-cell_1">2016-03-11</div>
+        <div class="div-cell div-cell_2">薪水 TWD 19174 已收到. 底薪: 19008 ; 全勤: 1000 ; 健保: 354 ; 健保: 480 ; 合計: 19174.. </div>
+        <div class="div-cell div-cell_3">我回家後發現公司應該沒有給全勤, 雖然總數合計沒有錯, 但是底薪應該是 20008, 全勤獎金應該是 0.</div>
+
+    </div>
+</div>
+
+</body>
+</html>

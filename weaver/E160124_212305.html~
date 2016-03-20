@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../css/css_002.css">
+<link rel="shortcut icon" href="../images/treegb_icon.ico">
+<title>HTML</title>
+</head>
+
+<body>
+
+<div class="meta_1">
+    <p class="meta_2">HTML.</p>
+    <p class="meta_3">E160124_212305</p>
+</div>
+
+
+<div class="crd">
+    <p class="pch pch_2"><a href="../yarns/E160124_214218" class="yarns-link">yarns  .HTML.</a>&nbsp; < (我不知道這是要幹麻的, 不過既然連結已經做了, 先保留.)</p>
+
+    <p class="pch pch_2">tags&nbsp; __ s-b-name.</p>
+        <div class="crd">
+        
+            <p class="pch pch_2"><a href="https://html.spec.whatwg.org/multipage/semantics.html">Living Standard — Last Updated 29 January 2016.</a>&nbsp; __ 這是每個 tag 的定義和用途. 但不是語法說明.&nbsp; __ 很完整文件.</p>
+            
+            <p class="pch pch_2"><a href="./E160124_212305.html#E160214_135614">br</a></p>
+
+            <p class="pch pch_2" id="E160220_103007">float</p>
+            
+            <p class="smid"><a href="http://stackoverflow.com/questions/4198269/margin-top-not-working-with-clear-both">margin-top not working with clear: both.</a><br>
+            <a href="http://stackoverflow.com/questions/18176368/can-someone-explain-to-me-why-clearboth-and-margin-top-cannot-work-in-the-same">Can someone explain to me why clear:both and margin-top cannot work in the same div?</a></p>
+            
+            <p class="pch pch_2">overflow</p>
+                <p class="smid"><a href="./E160124_212305.html#E160220_103007">float問題.</a></p>
+            
+            <p class="pch pch_2">p</p>
+            
+            <p class="pch pch_2">span</p>
+        </div>
+        
+    <p class="pch pch_2"><a href="http://www.oicqzone.com/pc/2015083122336.html">&amp;nbsp; &amp;ensp; &amp;emsp; &amp;thinsp; 等6種空白空格的區別.</a></p>
+
+    <p class="pch pch_2"><a href="../yarns/E160210_101401" class="yarns-link">The Trouble With EM ’n EN (and Other Shady Characters)</a>&emsp;__ 包含空格.</p>
+    
+    <p class="pch pch_2">Unicode.&nbsp; :: UTF-8.</p>
+        <div class="crd">
+        
+            <p class="pch pch_2"><a href="http://stackoverflow.com/questions/3203252/unicode-character-as-bullet-for-list-item-in-css">Unicode character as bullet for list-item in CSS</a></p>
+            
+            <p class="pch pch_2"><a href="http://www.w3schools.com/charsets/ref_utf_misc_symbols.asp">UTF-8 Miscellaneous Symbols.&nbsp __ w3school.</a></p>
+
+            <p class="pch pch_2"><a href="http://www.fileformat.info/info/unicode/char/search.htm?q=%E2%97%8F&preview=entity">Unicode Character Search.&nbsp __ FileFormat.Info.</a></p>
+
+            <p class="pch pch_2"><a href="http://graphemica.com/">Unicode Character Search.&nbsp __ graphemica.com.</a></p>
+
+        </div>
+        
+    <p class="pch pch_2">url encoding.</p>
+            <p>+ <a href="http://unix.stackexchange.com/questions/159253/decoding-url-encoding-percent-encoding">Decoding URL encoding (percent encoding).</a><br>
+            + <a href="http://askubuntu.com/questions/53770/how-can-i-encode-and-decode-percent-encoded-strings-on-the-command-line">How can I encode and decode percent-encoded strings on the command line?</a>&nbsp; __ (kenorb 的答案比較好.)</p>
+            
+    <p class="pch pch_2">url encoding.</p>
+    
+    <p class="pch">"Semantic"</p>
+        <p>關於 semantic 的意思, 我到現在也只是一知半解, 可以參考 :<br>
+        <a href="http://apolkingg8.logdown.com/posts/2014/02/04/note-of-semantic-html">[筆記] HTML5 Semantic Elements.</a><br>
+        http://stackoverflow.com/questions/907313/is-the-div-tag-ever-an-undesirable-alternative-to-the-p-tagv<br>
+        http://webmasters.stackexchange.com/questions/60099/use-p-tag-inside-a-div-tag-for-text<br>
+        http://stackoverflow.com/questions/2226562/what-is-the-difference-between-p-and-div<br>
+        不過應該有很多文章 會提到 semantic, 因為這個關鍵字常常被提到, 只是我還是看不懂意思.</p>
+    
+    <p class="pch">Position.</p>
+    <p>某 element 要用 static 以外的 position, 該 element 的上層階級一定只少要有一個是 relative or absolute (不一定要 direct parent), 如果沒有, 就會是 body.<br>
+    假如該 element 是 absolute, 該 element 會以最接近它又有 [relative ,,absolute] position 的上層階級, 去做參考位置 (其實是該 parent 的 boarder.)</p>
+    
+    <p class="pch" id="E160214_135614">&lt;br&gt;</p>
+        <p>&lt;br&gt; 好像應該是用來做 paragraph 裡面斷行的功能, 如果用來控制行距, <span class="gh_2">"這樣的作法不太好"</span>. 因為 html 應該純粹紀錄結構, 外觀控制 (paragraph 之間的間距) 應該用 css.</p>
+    
+        <p>html tag 的 <span class="gh_2">parse</span> 規則是, 以 &lt;br&gt 為例的話 :</p>
+        <p>&nbsp; {{<br
+        >+&lt;<br
+        >+br 本身 (注意, 與前面的 &lt; 不能有空格!)<br
+        >+一個或數個空格適合法的<br
+        >+/ 是合法的 (因為 br 是 no end tag.)<br
+        >+&gt;<br
+        >&nbsp; }}.</p>
+        
+        <p class="p-pre_2">所以可以利用這個<span class="gh_2">合法性</span>, 寫這樣 :<br
+        >&lt;p&gt;An idiom&lt;/p&gt;<br
+        >    &lt;pre&gt;An&lt;br<br
+        >    &gt;apple&lt;br<br
+        >    &gt;a day, keeps&lt;br<br
+        >    &gt;the doctor&lt;br<br
+        >    &gt;away.&lt;/pre&gt;<br
+        >&lt;p&gt;The end.&lt;/p&gt;<br
+        ><br
+        >這樣可以閃避 &lt;pre&gt; 裡面的 leading spaces, 而且合法.&lt;/p&gt;</p>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../css/css_002.css">
+<link rel="shortcut icon" href="../images/treegb_icon.ico">
+<title>[xbindkeys]</title>
+</head>
+
+<body>
+
+<div class="meta_1">
+    <p class="meta_2">.command .xbindkeys.</p>
+    <p class="meta_3">E160229_125233</p>
+</div>
+
+
+<div class="crd">
+
+    <p class="pch">Release.</p>
+        <p>[release + ??] 或 [?? + release], 在測試 [alt + tab] 的時候沒有作用不知道為什麼, 因為之前用在其他地方是可以用的. (會不會是 release 要 2 個鍵才會有作用 (有意義) ?)</p>
+    
+    <p class="pch">Sleep.</p>
+        <p>在測試 [alt + tab] 的時候發現一定要 sleep 才能成功, 估計是如果沒有 sleep 的話信號太快不能成功, 所以之後有類似動作要加一點點 sleep.</p>
+
+    <p class="pch">[--clearmodifiers].</p>
+            <p>在測試 [alt + tab] 的時候發現 [--clearmodifiers] 不能成功, 也不確定 [--clearmodifiers] 正確的功能. 所以在整條動作最前面用 [xdotool keyup Control_R ;] 代替, 先把 right control 提起來, 就可以成功了.</p>
+            
+    <p class="pch">[xdotool] 或 [xte] 不一定要寫在 .xbindkeys 裡面, 因為實際上可以執行任何 command, 所以可以把 [xdotool] 或 [xte] 的動作寫在外面的 script, 然後去執行這個 script.</p>
+    
+    <p class="pch">xdotool</p>
+        <div class="crd">
+
+            <p class="pch">按鍵名稱.</p>
+                <p>+可以用 [xev] 偵測按鍵名稱.<br>
+                +可以用 [0xff1b ,,escape] 這樣的按鍵名稱.<br>
+                +舉 Control 為例的話, 可以用 [Ctrl ,,Control_L ,,Control_R].</p>
+
+        </div>
+
+</div>
+
+</body>
+</html>

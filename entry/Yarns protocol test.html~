@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../css/css_002.css">
+<link rel="shortcut icon" href="../images/treegb_icon.ico">
+<title>Yarns protocol test</title>
+
+<style type="text/css">    /* Custom setting for [meta_2]. */
+    .meta_2 {color: #43ADB5 ; font-size: 3em ; font-weight: bold ; margin : 0 ; transition: all 0.7s ease ; text-shadow: 0.1em 0.1em 0.1em #BEE5E8 ;}
+    .meta_2:hover {transform: scale(1.1) ;text-shadow: 0.2em 0.2em 0.1em #BEE5E8 ; letter-spacing: 0.7em ;}
+</style>
+</head>
+
+<body>
+
+<div class="meta_1">
+    <p class="meta_2">Yarns protocol test.</p>
+</div>
+
+<div class="crd">
+
+    <p id="E160312_211325">(Yanrs protocol path will show here)</p>
+    
+    <p class="pch pch_2"><a href="yarns://../../3- Gnl/1- Gnl/替代役退役證明書 . 掃描/" class="yarns-link"  id="disable">.test .替代役退役證明書.</a></p>
+    
+    <p class="pch pch_2"><a href="yarns://../../1-%20tmp%2Ffoolayer1%2Ffoo%20Laye~%20%2B%20%2C%2C%20%20%5Br%5D%20%20__2%2F" class="yarns-link"  id="E160312_210315">.test .1- tmp.</a></p>
+    
+    <p class="pch pch_2">infet- entry</p>    
+        <div class="crd">
+        
+            <p class="pch pch_2"><a href="./hanging.html">Hanging.</a></p>
+
+            <p class="pch pch_2"><a href="./Jnl.html#E160124_180441">Jnl.</a></p>
+
+            <p class="pch pch_2"><a href="./tid-.html">Tid-.</a></p>
+            
+        </div>
+    
+    <p class="pch pch_2"><a href="infet://../../../../y  arns/E160124_173123"><span class="yarns-link">.hanging .yarns.</span></a></p>
+    
+    <p class="pch">.Info .main.</p>
+        <div class="crd">
+        
+            <p class="pch pch_2"><a href="../weaver/E160124_212304.html">.Tech .main.</a></p>
+
+            <p class="pch pch_2"><a href="../weaver/E160128_211558.html">English.</a>&nbsp; :: 英文.</p>
+
+            <p class="pch pch_2"><a href="../weaver/E160124_223612.html">Health.</a>&nbsp; :: 健康,, 醫療.</p>
+            
+            <p class="pch pch_2"><a href="http://www.mobile01.com/topicdetail.php?f=37&t=812192&p=1">設計.&nbsp; __ "設計"這條路甘苦談~目前在學或者在業界的前輩^^歡迎給點指教.</a></p>
+            
+            <p class="pch pch_2"><a href="../weaver/E160301_001750.html">工作.</a></p>
+            
+        </div>    
+    <p class="pch pch-cls">.Info .main.</p>
+    
+    <p class="pch pch_2">.Gnl- .main.</p>
+        <div class="crd">
+        
+            <p class="pch pch_2"><a href="../yarns/E160228_115936" class="yarns-link">.Backup .gnl.</a></p>
+            
+            <p class="pch pch_2"><a href="../yarns/E160129_001654" class="yarns-link">HTML test.</a></p>
+
+            <p class="pch pch_2"><a href="../weaver/E160124_233340.html">Inspiration.</a></p>
+
+            <p class="pch pch_2"><a href="../weaver/E160124_233341.html">Youtube.</a></p>
+            
+            <p class="pch pch_2"><a href="../weaver/E160229_184119.html">影片.</a></p>
+
+            <p class="pch pch_2"><a href="../weaver/E160128_200053.html">我買的食物 (unfinished).</a></p>
+
+            <p class="pch pch_2"><a href="../weaver/E160209_162606.html">.薪水 .table.</a></p>
+
+            <p class="pch pch_2"><a href="../weaver/E160209_164058.html">.房租 .table.</a></p>
+
+            <p class="pch pch_2"><a href="../weaver/E160221_111856.html">asKansweR.</a></p>
+
+            <p class="pch pch_2"><a href="http://www.319papago.idv.tw/holiday/2016-hr/2016_HR.html">2016行事曆-人事行政局105年行事曆.</a></p>
+
+            <p class="pch pch_2"><a href="http://web.dgpa.gov.tw/ct.asp?xItem=12426&ctNode=1287&mp=7">2016 西曆 ,,農曆.</a></p>
+            
+            <p class="pch pch_2"><a href="../weaver/E160305_100019.html">想看的 .書 ,,東西.</a></p>
+            
+            <p class="pch pch_2"><a href="../weaver/E160301_005935.html">遊戲.</a></p>
+
+        </div>
+    <p class="pch pch-cls">.Gnl- .main.</p>
+    
+    <p class="pch"><a href="/mnt/core/core.2/Fonet/entry/index.html">Fonet.</a></p>
+    
+</div>
+
+
+<script type="text/javascript">
+	var current_path = window.location.href ;
+	var current_path_parent = current_path.substring(0, current_path.lastIndexOf("/") + 1) ;
+	current_path_parent = current_path_parent.replace(/^file:\/\//,"yarns://")
+	var current_path_base = document.getElementById("E160312_210315").href.replace(/^yarns:\/\//,"") ;
+	var test = absolute (current_path_parent, current_path_base) ;
+
+	document.getElementById("E160312_211325").innerHTML = test ;
+	document.getElementById("E160312_210315").href = test ;
+	
+	function absolute(base, relative) {
+        var stack = base.split("/"),
+            parts = relative.split("/");
+        stack.pop(); // remove current file name (or empty string)
+                     // (omit if "base" is the current folder without trailing slash)
+        for (var i=0; i<parts.length; i++) {
+            if (parts[i] == ".")
+                continue;
+            if (parts[i] == "..")
+                stack.pop();
+            else
+                stack.push(parts[i]);
+        }
+        return stack.join("/");
+    }
+</script>>
+
+</body>
+</html>

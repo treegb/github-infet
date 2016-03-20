@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../css/css_002.css">
+<link rel="shortcut icon" href="../images/treegb_icon.ico">
+<title>hanging</title>
+</head>
+
+<body>
+
+<div class="meta_1">
+    <p class="meta_2">hanging.</p>
+    <p class="meta_3">E123456_123456</p>
+</div>
+
+
+<p class="p-pre">
+--  目前 Fonet 的 瀏覽器的 windows 處理到剩 [18 個 F1 鍵]. 下禮拜再繼續清理.
+
+
+*< website >*
+    --  <a href="http://www.tipue.com/search/docs/?d=1">Tipue search.</a>
+    
+    --  debian 安裝中文輸入法.
+        語言, 語系.
+        [http://wiki.debian.org.hk/w/Make_Debian_support_Chinese].
+
+.< website >.
+</p>
+
+
+<div class="crd">
+
+    <p class="pch">firefox 分頁轉出.</p>
+        <div class="crd">
+            
+            <p><a href="http://www.lukew.com/ff/entry.asp?1514">Multi-Device Layout Patterns.</a></p>
+            
+            <p><a href="https://www.smashingmagazine.com/2009/04/from-table-hell-to-div-hell/">Table Layouts vs. Div Layouts: From Hell to… Hell?</a></p>
+            
+            <p><a href="http://blog.xuite.net/jin117/blog/65343837-%E5%8B%9E%E5%B7%A5%E8%87%AA%E8%AB%8B%E9%9B%A2%E8%81%B7%E6%99%82%E6%87%89%E6%B3%A8%E6%84%8F%E7%9A%84%E4%BA%8B%E9%A0%85%E6%88%96%E6%B3%95%E5%BE%8B%E5%95%8F%E9%A1%8C">勞工自請離職時應注意的事項或法律問題.&nbsp; __ (很長).</a></p>
+            
+            <p><a href="https://www.zhihu.com/question/22420900">怎樣成為全棧工程師 (Full Stack Developer)?&nbsp; __ (很長).</a></p>
+            
+            <p><a href="http://tympanus.net/codrops/2009/10/03/33-javascript-solutions-for-sorting-tables/">33 JavaScript Solutions for Sorting Tables.</a></p>
+            
+            <p><a href="http://tablesorter.com/docs/">JQuery plugin : tablesorter.</a></p>
+            
+            <p><a href="http://www.bittbox.com/illustrator/17-tips-that-will-save-you-time-in-illustrator">17 Tips that will save you time in Illustrator.</a></p>
+
+        </div>
+        
+</div>
+
+</body>
+</html>

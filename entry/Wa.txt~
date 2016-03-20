@@ -1,0 +1,48 @@
+-- N151101233441^  :: youtube, mycomments, 可樂瓶可樂罐, 左輪, 6 unts, 風險, 機率, 核廢料, 輻射, 核融合, 核分裂, [辯論：這個世界需要核能嗎？(中英雙字幕)], [https://youtu.be/pF8TzmqhgQo].
+-- N151101234351^  :: youtube, music, ^T151101235729, high, [シッポリとフランスのファンを包み込む moumoon、癒しの美声 Japan Expo Live House 2014], [https://youtu.be/ufH-ScY-FIg].
+-- N151101235024^  :: youtube, music, ^T151101235729, 旗袍, 竹, 水, 綠, x 風鈴, 管, 吉他, cd, 專輯,  [moumoon / FULLMOON LIVE 2015.July], [https://youtu.be/lulcVn9Es8Q].
+-- T151101235729^  :: music, 音樂, 女生, 日本, live, Yuka, Masaki, high, 2 人, 2 unts, moumoon, 法文, 法國, 柔月亮.
+-- N151102000107^  :: youtube, music, ^T151101235729, 船, 巴黎鐵塔, 法國, 河水, 清爽乾淨, bright 明亮, 高音, [moumoon / 「It’s Our Time」 MUSIC VIDEO(歌詞あり)], [https://youtu.be/_mc9EhvCSjo].
+
+--  jnl-  .white-space  .button  .動態改 {css to {pre-wrap,, pre},, 顯示隱藏 [img] }.
+
+
+--  table 和資料重複問題.
+    .資料量一多, 好像就非用 table 不可?
+    .分類勢必造成 (需要) 資料重複?
+
+--  button  .css  .js  .img 問題.
+    不一定要顯示所有圖片, 可以設計每個圖片都要單獨點才會顯示.
+
+﻿--  infet.
+    + Infet 要放手機, 所以 weaver 要分"級別"?
+    + hanging 的 css border 又不一樣了.
+    + 工作日誌 重新測試, 用新檔案一個一個舊的 css 加上去, 看哪裡有問題.
+    
+--  改 core1 core2 asKansweR.
+    解決 cryptsetup 問題, 改紫碟和主機 asKansweR 然後備份.
+    
+--  yarns protocol test.html 還在測試, 放在 entry 底下.
+
+--  去五金行買燈管, 錢從房租扣.
+--  phone 照片.
+--  買車燈.
+
+--  娟姊要買車燈, 加我 1 前 2 後.
+    
+--  買環保快, 去洗衣店走一走.
+
+--  做 30 x 30 "海報".
+
+--  郵政 visa 卡上網去開放.
+
+--  evernote.
+    --  tagspaces
+    --  emacs, org-mode.
+    --  laverna
+        + 還很年輕.
+        + Laverna : uses client-side JS-based encyption which in theory is good, but there's no (easy) way to know if/when they (or a man-in-the-middle with their SSL cert) add code to send the decrypted notes back to a server.
+    --  Tiddlywiki : 開發者 90. 印象中之前看過好像會有效能問題.
+
+--  禮拜一跟娟姐問薪水問題, 是不是不應改寫 [全勤]?
+

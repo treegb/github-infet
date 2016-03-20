@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../css/css_002.css">
+<title>jnl-.etd</title>
+<link rel="shortcut icon" href="../treegb_icon.ico">
+
+<style type="text/css">
+
+</style>
+</head>
+
+<body>
+<p class="p-gnl">
+** jnl-.etd.
+------------------------------------------------------------------------------------------------------
+
+--  <span id="E160124_174649">2016-01-22.</span>
+    --  已設計數個帶頭.
+        其實我開始覺得我的帶頭設計還不賴, 目前已經設計了 <a href="../big-pot/E160117_104506.png">[Bravo 帶頭]</a>, <a href="../big-pot/E160118_102339.png"> [螺旋 帶頭]</a>, <a href="../big-pot/E160122_092248.png">[3 個半球體連結 帶頭] ("三角帶頭")</a> 等等.
+        尤其是最後一個, 之所以這麼 "跳 tone", 是因為我忽視了老闆一直以來給我的觀念 - 尺寸要精確.
+        我這個設計, 思考時跟以前不一樣, 我 think out of box, 所以 idea 很好.
+        老闆的觀念沒辦法在進步了, 他自己畫的設計稿我看了一下, 都不太具有創意和重點.
+
+--  <span id="E160124_205547">2016-01-23.</span>
+    建立 infet- 系統.
+    上禮拜在公司時, 開始萌生 infet- 的想法. 回到家偶爾會花時間改進公司的 infet-.
+    這個 SAT 和 SUN 我異常任真的利用時間, 建立 infet- 的基礎, 然後開始建立自己 (home) 的 infet-.
+    在這過程學到很多東西和經驗.
+    目前瓶頸在 html 的搜尋引擎上面, 但這個不急, 以後再來想辦法. 因為光靠 network 架構分類資料, 就已經很好了.
+    
+--  <span id="E160209_160039">2016-02-08.</span>
+    +繼續學 javascript, 看 youtube 的<a href="https://youtu.be/q_MXH_Ponpg">頻道</a>.
+    +午餐突然看到營養的 .影片 .演講, 開始思考飲食的問題, 所以隔天就買水果來吃, 還有開始思考是否不要過量份量和運動.
+    +做筆記進 infet- 時發現 css 權重的問題, 開始爬資料.
+    +改 infet- 的 css 配色, 用公司的 infet- 測試, 微調很久 (弄到凌晨 04:00) 總算配好顏色. 順便修正 {公司 ,,家裡} infet- 的種種問題.
+    +今天超冷, 大概是寒流最低潮, 明天就溫暖了.
+</p>
+</body>
+</html>

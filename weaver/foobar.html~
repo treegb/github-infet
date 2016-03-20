@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../css/css_002(disable).css">
+<title>沉思.領悟</title>
+<link rel="shortcut icon" href="../treegb_icon.ico">
+
+<style type="text/css">
+    body {margin-top: 7px ; margin-bottom: 50px ;}
+    .p-gnl {white-space: pre-wrap ; line-height: 150% ; margin: 0 auto ; color: #333 ; display: block ; clear: none ;}
+    .div-gnl {white-space: pre-wrap ; line-height: 150% ; margin: 0 auto ; color: #333 ;}
+    a:link, a:visited  {color: #007C85 ; font-style: normal ; text-decoration: none ;}    /* Main hyperlink, [weaver] or external link. */
+    .yarns-link, .yarns-link a, a.yarns-link:link, a.yarns-link:visited  {color: #825B17 ; text-decoration: none ;}    /* Hyperlink, [yanrs]. */
+    .gh_1 {color: #28822A ; font-weight: normal ; font-size: 1.1rem ; font-style: normal ;}    /* Highlight, teal, normal used.  __ Mark as normal highlight. */
+    .gh_2 {color: #000 ; font-weight: normal ; font-size: 1.1rem ; font-style: italic ;}    /* Italic, used as quote or little special meaning, less important than [gh_1]. */
+    .gh_3 {color: #28822A ; background-color: #E3E3E3 ; font-weight: normal ; font-size: 1.1rem ; font-style: normal ;}    /* Highlight, like [gh_1] but with a little grey bg-, main title of multiple [gh_1] "children".
+    __ Used when there are too many highlight_1, and you want to emphasise the "parent" title more.*/
+    .gh_4 {color: #D63A3A ; font-weight: normal ; font-size: 1.1rem ; font-style: normal ; }    /* Warning, red, indicate here might be something wrong, or mark as strong .notice ,,warning. */
+    .gh_5 {color: #D46504 ; font-weight: bold ; font-size: 1.1rem ; font-style: normal ; }    /* Notice, orange, mark as notice, not to mean error or anything's going wrong. */
+    .gh_6 {font-weight: bold ;}    /* Bold, used inside <a> tag or other situation, when don't want to bother the bigger span's format. */
+    
+    :target {background-color: #BEE5E8 ;}
+    
+    .img_1 {width: 200px ; height: auto ;}
+    .span_img_1 {display : inline-block ; text-align : center ;}
+    
+    
+    .p-gnl_2 {white-space: pre-wrap ; line-height: 150% ; margin: 0 auto ; color: #333 ; display: inline-block ; width: 1000px ; float: left ;}
+    .block-you-left {display: block ; float: left ; white-space: pre ; clear : left ; color: red ;}
+</style>
+</head>
+
+<body>
+<p class="p-gnl">** Foobar
+** E160130_221402.
+------------------------------------------------------------------------------------------------------
+
+
+*< 意志力 >*
+    --  運動的過程可以鍛鍊意志力, 因為運動某些時段是痛苦的.
+
+    --  觀察 [<span class="gh_2">賭</span>]
+        <a href="../yarns/E160130_221403" class="yarns-link">你的老公會賭博嗎?</a>
+
+    --  關於普遍流傳的 {建言,, 道理,, 俗話說}.
+        我在想, 這些普遍的道理, 比如 "酒賭毒碰不得", 是有效抑制 [惡] 的.
+        因為人性的意志力普遍不到吸毒可以戒毒, 賭博可以戒賭的程度, 所以用這些 "警惕" 的流傳, 可以比自己的意志力來的有效的意志 [惡].
+        這些道理就像已經寫好的 <span class="gh_2">SOP</span> 一樣, 愈到問題, 可以照著 "範例" 走, 不須再動腦筋 (意志力,, 理性) 思考.
+        所以這些普遍的道理在社會上, 許多一般普通的人, 很適用.
+        
+    --  目標.
+        <span class="gh_2">熱情</span>和<span class="gh_2">決心</span>同樣都可以產生往 [目標] 的 [行動], 因為這 2 種方式都讓目標的 "image" 變得清晰.
+        刺激行動的方式, 只要目標的 image 夠清晰, 就可以, 所以 熱情 或 決心 都可以達到刺激行動 (學習一段影片).
+        但 決心 比 熱情 好, 原因是前者是平淡但持之以恆的向目標前進, 後者是一時的熱情, 不一定會持之以恆.
+
+        當意志力渙散時, 要讓 目標 的 影像, 再度清晰. 知道自己想要做什麼, 才可以接受初步無聊基礎學習的過程. (而不是透過學習的快樂, 因為不一定會有.)
+
+        決心夠強的話, 什麼事情都做的到, 失敗也無所謂.
+        
+    --  <span class="gh_1">康德</span>的 [自由] 定義.
+</p><div class="block-you-left">        </div><p class="p-gnl_2">可先參考 <a href="../yarns/E160209_214528" class="yarns-link">[哲學概論  __ 第十三週 : 康德的義務論]</a>.
+        
+我瞬間想通當初康德說的<span class="gh_1">自由</span>是什麼意思了. 康德說的這個自由, 跟人身自由的自由完全<span class="gh_2">不一樣</span>.
+我在洗澡時, 思考我最近沒精神, 就讀不太下書 (Javascript). 然後我就在想說我的 .決策 ,,行動 最後總是受到某些條件影響, 比如 .精神 ,,情緒狀態 ,,欲望.
+我當下就想通康德的自由 (不自由) 是這個意思, 就是我的意志是想要讀書, 可是卻受到這些因素影響而改變行為, 所以我的意志是不自由的 (被捆綁).
+精神狀態好的時候可以主動學習, 精神差的時候我的意志就妥協了.
+
+如果我的意志是自由的話, 如果現在想要做一件事的, 意志不管在什麼狀態都不受其他因素干擾影響, 行為也不會改變.
+行為如果遵照我的意志行使動作, 我的意志想幹麻, 行為就這麼做, 那我是自由的.
+真正的自由是, 自由意志<span class="gh_2">完全</span>不受其他 {因素 ,,理由} {妥協 ,,影響決策}, 不管其他這些 {因素 ,,理由} 是多強烈干擾.
+
+另外, 我想到那個 pdf 康德說到 [他律] 的部份, 我在想 [自我警惕] 應該是屬於他律而不是自律, 因為行為被控制的原因是受到自己良心 .譴責 ,,唾棄, 而不是自己透過自由的意志去控制.
+另外, 我認為傳統意志力的鍛鍊 (例如生活在軍隊) 並不會讓意志變自由, 而只是<span class="gh_2">增加忍受程度</span>. 行為被控制的原因不是因為意志的自由度增加, 而是因為<span class="gh_2">痛苦</span>的感覺<span class="gh_2">麻痺</span>了, 忍受度增加. 如果哪天痛苦又回來, 那行為就不受控制了.
+同樣的, <span class="gh_2">養成好習慣</span>也是用<span class="gh_2">麻痺痛苦</span>的方式, 達到行為控制.
+確實, 好習慣維持一段時間就會變成生活反應的一部分, 如果每天做, 養成習慣後, 再痛苦的事情也可以習慣, 這的確是事實.
+<span class="gh_2">但</span>假如今天這個好習慣不持續 (中斷), 要重新開始就非常困難, 所以養成習慣的立基點還是在於 "麻痺痛苦", 意志不會從此變自由. 
+上面這 3 個都不是我要的錯誤方法.</p>
+<p class="p-gnl">.< 意志力 >.
+
+
+--  獨立思考.
+    -- -
+        +別人說的話 (文章,, 論點 ...) 永遠佔判斷百分比 (判斷 依據,, 條件.) 的一部分, 不管是對的錯的. 沒有為什麼, 不用每次思考都在去想為什麼這樣, 因為太多謊言機率 (自然人性).
+        永遠保持那個百分比, 不要讓它佔滿全部的判斷 依據,, 條件.
+        +吸收知識的過程, 只能記住完整事實, 不能去判斷. 判斷是之後慢慢的事情, 這樣判斷才會中立.
+        
+--  學習的方法.
+    --  伐木.
+        吸收知識的過程, 就像在一片<span class="gh_2">樹林中央向外圈伐木</span>, 最後目的是了解土地的全貌 (假設樹林是過不去的, 只有伐木後才過得去)
+        , 那<span class="gh_2">支狀路線</span>比<span class="gh_2">向外繞圓圈</span>, 視野可以拓展的更快, 是比較有效率的探索方式.
+        上面兩種方式實際上 是在比喻亞洲的 [循序漸進式閱讀], 和國外的 [跳躍式章節閱讀].
+        實際上我們沒有足夠時間一圈圈向外繞開去開發所有樹林, 所以必須用數個重點向前探索的支線繞出. 必要的時候兩個支線會<span class="gh_2">相接</span>, 這就是比喻 "融會貫通", "我了解了, 原來是這麼一回事!" 的感覺.
+
+        所以學習知識的過程, 應該要是先學, 先記住獨立不相干的章節, 然後之後遇到知識接軌的時候, 自然就會 恍然大悟, 開竅.
+        可以回想國貿電子科技黃先生, 理線 (網路線) 的過程, 一開始是從不知道, 一條條理線, 紀錄在紙上, 最後了解全貌.
+
+    --  .抽絲剝繭 .解決問題的 .能力 ,,方法.
+        --  .網路線 .黃先生.
+            當國貿電子科技黃先生來公司查網路線的時候, 它起先完全不知道複雜的網路佈線, 但他自信的一條條理出頭緒, 畫在紙上, 理出整個線路的輪廓.
+            這是很好的解決問題的方式. 再大的問題都可以用這種方式, <span class="gh_2">分解成數個</span >比較小的問題, 一一解決掉.
+
+        --  .碎形方式的結構分析 .程式碼.
+            看程式碼要使用 2 種視野檢查, 1 種是<span class="gh_2">全局的 .結構 ,,輪廓 ,,大局</span>, 另外 1 種是 <span class="gh_2">.細節 ,,語法</span>.
+            不斷切換這兩種視野去了解整段 code, 找出有沒有問題.
+            
+            雖然這裡比喻說是 2 種視野, 但是實際上視野是從大到很大, 小到很細節, 不是一定要 2 個.
+            這樣的檢查方法是要確保大至架構沒問題, 小至語法 (文法) 沒有錯誤.
+
+        --  <span class="gh_1">不要</span>一直重複嘗試同一種方法解決一個出現的問題, 這樣找不到答案.
+            我<span class="gh_2">好幾次</span>都是這樣解決問題的 : 找半天看同一個地方 (問題很接近的地方), 找到死就是找不到問題, 然後看看旁邊其他地方或是完全不相關的地方, 問題就跑出來了.
+            結果<span class="gh_2">每每</span>證明, 找到的 bug, 都完全不是我一開始一直重複找問題的地方!
+                 
+</p>
+</body>
+</html>

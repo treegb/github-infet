@@ -1,0 +1,180 @@
+
+    .< website >.
+            :: wordpress, website, 官網.
+        --  asKansweR. (web interface asKansweR, nothing to do with database.)
+            site title : golfbelt
+            username : golfbelt_usr
+            answeR : tdBCztHUiE7A
+        
+        --  常用命令.
+            [sudo chown -R treegb:www-data /var/www/html/golfbelt/ ; sudo chmod -R g+w /var/www/html/golfbelt/].
+
+            -- wordpress install.
+            [https://www.digitalocean.com/community/tutorials/how-to-install-wordpress-on-ubuntu-12-04].
+            [https://www.digitalocean.com/community/tutorials/how-to-install-wordpress-on-ubuntu-14-04].
+            [https://www.howtoforge.com/centos_wordpress_install].
+            [https://www.howtoforge.com/centos_wordpress_install].
+
+        --  debian 安裝中文輸入法.
+            語言, 語系.
+            [http://wiki.debian.org.hk/w/Make_Debian_support_Chinese].
+
+        --  backup,, restore~ mysql.
+            [http://webcheatsheet.com/sql/mysql_backup_restore.php].
+            [http://stackoverflow.com/questions/10934745/restore-the-mysql-database-from-frm-files].
+            [http://stackoverflow.com/questions/879176/how-to-recover-mysql-db-from-myd-myi-frm-files]  < (好複雜).
+
+        --  MySQL Master-to-Master Repliction.
+            [https://www.howtoforge.com/mysql_master_master_replication].
+
+        --  what is {.FRM,, .MYI,, .MYD} ?
+            [http://www.mindfiresolutions.com/Physical-Mysql--what-are-these-FRM-MYI-MYD-Need-this-1587.php].
+
+        --  [ mysqldump,, mysqlhotcopy].
+            [https://dev.mysql.com/doc/refman/5.5/en/backup-and-recovery.html]  < (mysql official document.)
+            [http://www.thegeekstuff.com/2008/09/backup-and-restore-mysql-database-using-mysqldump/]  < (Backup and Restore MySQL Database Using mysqldump.)
+            [http://stackoverflow.com/questions/10934745/restore-the-mysql-database-from-frm-files]  < (Restore the mysql database from .frm files)
+            [http://webcheatsheet.com/sql/mysql_backup_restore.php]  < (How to Back Up and Restore a MySQL Database.) (很充足.)
+
+            mysqldump 測試結果, 可以成功替換 table, 不須 [service mysql stop].
+
+        --  [insert,, update,, alter].
+            [http://stackoverflow.com/questions/485039/mysql-insert-where-query].
+            [http://www.w3schools.com/sql/sql_alter.asp].
+
+        --  [var/lib/mysql].
+            mysql 更動 某 table 資料後, [var/lib/mysql] 會更新的檔案好像就只有.
+
+             {{
+            ib_logfile0
+            ibdata1
+            mysql/general_log.CSM
+            mysql/slow_log.CSM
+             )}
+
+            ib_logfile0
+            ibdata1
+            mysql/general_log.CSM
+            mysql/slow_log.CSM
+        
+        --  wordpress virtual hosts.  __ How To Set Up Multiple WordPress Sites on a Single Ubuntu VPS.
+            [https://www.digitalocean.com/community/tutorials/how-to-set-up-multiple-wordpress-sites-on-a-single-ubuntu-vps].
+        
+        
+        .< 設計概念 >.
+            --  本來是是 2015-12-09 以前最重要的工作, 後來老闆有改變想法, 以設計帶頭優先.
+                劉先生預計 2015-12-31 大家通通都要準備好, 他那邊可以開始跟客戶發開發信的樣子.
+            
+            --  我們的產品特色 (球標機構) 要用動畫表現.  我在想可以用 Blender, 有需要的話請 Vivi 幫我們拍攝 (也可混合 Blender).
+            
+            --  紅色資料夾的實體花絮文件.
+            
+            --  參考積家錶 [http://www.jaeger-lecoultre.com/TW/en/collections/master#55click=megamenu] 還有裡面的影片.
+        *< 設計概念 >*
+        
+        
+    *< website >*
+    
+    
+    --  blender.
+        [http://www.penguinproducer.com/Blog/2011/12/simple-video-editing-with-blender/].
+        [http://wiki.blender.org/index.php/Doc:2.4/Manual/Sequencer/Usage].  < (Sequencer Usage).
+
+
+.< 回家學習. >.
+    --  cygwin.
+        [https://coderwall.com/p/f1ykha/open-the-file-manager-gui-from-the-command-line] < (explorer.)
+        [http://superuser.com/questions/488157/how-do-i-make-ctrl-arrow-keys-move-forward-backward-a-word-at-a-time-in-cygwin-b] < (cygwin move cursor word).
+
+    --  [illustrator].
+        [http://www.digitalartsonline.co.uk/tutorials/adobe-illustrator/create-low-poly-portrait/#17]. < (Polygonal face.)
+        [http://vectorboom.com/load/tutorials/effects/polygonal_vector_mosaic/3-1-0-305].  < (Polygonal.)
+    
+    --  dos to unix.
+        [http://en.kioskea.net/faq/1313-converting-dos-unix-and-vice-versa].
+        [http://ubuntuforums.org/showthread.php?t=1540180].
+    
+    --  linux.
+        http://vim.wikia.com/wiki/Replace_a_word_with_yanked_text
+        http://unix.stackexchange.com/questions/43478/vi-vim-how-can-i-write-out-a-number-of-lines-to-a-new-file
+        http://www.cyberciti.biz/tips/debugging-shell-script.html
+        [http://stackoverflow.com/questions/17841556/how-to-escape-out-of-the-man-screen-or-page-in-unix] < ( [$MANPAGER] ).
+        [updatedb --netpaths='//Pc-201307052256/annie']
+        [http://stackoverflow.com/questions/192249/how-do-i-parse-command-line-arguments-in-bash]. < (How do I parse command line arguments in bash?).
+    
+    --  網頁設計軟體.
+        --  [http://webdesign.about.com/od/linuxunixhtmleditors/tp/best_linux_html_editors.htm]. < (各個軟體排名 for Linux.)
+        --  [KompoZer] 可能已經五年沒更新了, 強大但不考慮.
+        --  [Komodo Edit] 是最後我選的, 使用 Mozilla Public License 1.1, 更新頻繁
+            , 而且本身公司特性跨平台, 又是 [IDE], 又有其它產品 [Komodo IDE ], 最後選他.
+    
+    --  adobe {Linux,試用版}.
+        [http://jiemr.com/adobe-cc-recommended-reason].
+        [http://jiemr.com/adobe-cc-recommended-reason].  __ 入手 Adobe cc 常見的十大理由與... .
+    
+    --  設計心路.
+        [http://www.mobile01.com/topicdetail.php?f=37&t=812192&p=3].
+    
+    --  檔名排序的規則.
+        好像跟 locale 的 collate 有關.
+    
+    --  Why run your own mail server?
+        [http://aplawrence.com/CS/mailserver.html].
+    
+    
+    .< filename >.
+        --  good filename.  __ 超完整文件. 放進 info.
+            Fixing Unix/Linux/POSIX Filenames : [http://www.dwheeler.com/essays/fixing-unix-linux-filenames.html].
+    *< filename >*
+   
+    
+    --  LLC, LTD 及 INC. 的異同.
+        [http://www.chochan.com/doc/2006/2006-08-14.pdf]
+    
+    --  excel to cvs 1 line.
+        [http://www.extendoffice.com/documents/excel/1172-excel-transpose-multiple-columns-into-one-column.html]. < (存起來.)
+    
+    --  [三分鐘熱度] blog.
+        他的文章有職場的, 評價還蠻熱烈 : [http://sobakome.pixnet.net/blog/post/39656459].
+        責任制 : [http://sobakome.pixnet.net/blog/category/list/1730995].
+    
+    --  對自己的健康/人生/家人，才有『責任制』這回事 : [http://beckyhw8164.pixnet.net/blog/post/20117218c]
+    
+    --  [www.playpcesor.com/2014/06/tech-bad-habit.html]  :: Line, 時間管理, 已讀不回, 分心, 切換工作.
+    
+    --  柯文哲.
+        紐約時報》暢銷書榜（The New York Times Best Sellers），例如《平衡計分卡》、《藍海策略》、《世界是平的》等等。
+        [http://womany.net/read/article/8555].
+        
+    
+    .< MSS >.
+        --  Journal 的 "link" 用於 {模糊,, 不重要} 的link ; netag- 的 link 用於{確定,, 比較大} 的 link.
+            [netag-] 的 link 不用說, 就是標準的連結網. 而假如在 journal 裡的同一條 log 上面, 同時存在兩個標籤, 這樣對於搜尋來說是無形中建立起 link 關係的.
+            但是這樣是很捷徑的做法, 在 journal 裡面建立的這種 link 關係, 是不精確的.
+            所以 Journal 的 "link" 用於 {模糊,, 不重要} 的關係. 不是每兩件事都需要花不必要的時間去做精確的連結關係.
+            
+        -- info-,, note-,, aware-.
+    *< MSS >*
+    
+    
+    --  [ss].  __ ss command .tmp_  :: Linux, cygwin.
+        [treegb/simple-search.sh | sed -r "s/\x1B\[([0-9]{1,2}(;[0-9]{1,2})?)?[m|K]//g" > /cygdrive/d/data/ss\ output.txt].
+    
+    --  webfonts.
+        [https://css-tricks.com/snippets/css/using-font-face/].
+        [https://www.pagelines.com/adding-custom-fonts-to-wordpress/].
+        [http://stackoverflow.com/questions/15257774/font-face-blurry-bolded-distorted-glyphs-for-remote-fonts]  < (是要看底下 src .url 的格式.)
+        [http://stackoverflow.com/questions/3799644/html-how-to-use-different-fonts].
+    
+    --  online font converter.
+        [http://www.freefontconverter.com/].
+    
+    --  online font tester.
+        [http://labs.thecssninja.com/font_dragr/].
+        
+    --  Fixed vs. Fluid vs. Elastic Layout: What’s The Right One For You?
+        [https://www.smashingmagazine.com/2009/06/fixed-vs-fluid-vs-elastic-layout-whats-the-right-one-for-you/].
+        
+    --  Why are people making tables with divs?
+    [http://programmers.stackexchange.com/questions/277778/why-are-people-making-tables-with-divs].
+*< 回家學習. >*

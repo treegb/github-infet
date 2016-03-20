@@ -1,0 +1,157 @@
+/* Main structure. */
+    body {margin: 0 ; padding : 0 ;}
+    .p-gnl {white-space: normal ; line-height: 150% ; margin: 30px 25px auto 25px ; color: #333 ;}    /* No pre. */
+    .p-gnl:last-child {margin-bottom: 100px ;}
+    .p-pre {white-space: pre ; line-height: 150% ; margin: 30px 20px ; color: #333 ; margin-left: 25px ;}    /* Use pre. */
+    .p-pre:last-child {margin-bottom: 100px ;}
+    .p-pre_2 {white-space: pre-wrap ; display: block ;}    /* Use inside small paragraph to preserving sequences white space only! */
+    .p-mono {font-family: "WenQuanYi Zen Hei Mono" ;}
+    .div-gnl {white-space: normal ; line-height: 150% ; margin: 30px 20px ; color: #333 ;}    /* Currently used at some tables. */
+    .div-gnl:last-child {margin-bottom: 100px ;}
+    p {margin-top: 1.1em ; margin-bottom: 0 ;}    /* Probably the most often used tag. */
+    .pch + p {margin-top: 0 ;}
+    .smid {margin-left: 50px ;}    /* Simple indent in <p>, use mostly in s-b-alphabetical, order to pop out the alphabetical. */
+    span, p {line-height: 130% ;}    /* If inside [.crd] contain any span, this line might be useful. */
+
+
+/*The [card] (a block) and [punch] (a list-item) are the main structure of the hole article. */
+
+    body > .crd {border: 0 ; margin: 30px 2px ;}
+    body > .crd:last-child { margin-bottom: 100px ;}
+
+/* Card. */
+    .crd {display: block ; position: relative ;
+    border: solid #CCC 1px ; border-left : solid #CCC 5px ; border-radius: 15px  ;
+    margin : 0.1em 10px 0 0 ; padding: 0 0 1em 40px ;
+    color: #333 ; white-space: normal ; line-height: 150% ;
+    }
+
+/* Punch. */    
+    .pch {display: block ; line-height: 150% ; position: relative ; padding-top: 0px ; margin-top: 1.3em ;}
+    .pch::before {content: "⚫" ; position: absolute ; left: -18px; display: block ;}
+    /* [•] Works on both windows XP and Linux, But [⚫] (\26AB) only works on Linux.  __ Have to save file to show UTF-8 "encoding"! */
+    /* [http://unicode-search.net/unicode-namesearch.pl?term=CIRCLE]. */
+    
+    .pch + .pch {margin-top: 0.8em ;}
+
+    .crd > .pch:first-child {margin-top: 0.5em ;}
+    .crd + .pch:not(.pch-cls) {margin-top: 2em ;}    /* Set the "spacing" after [crd]. */
+    .crd + .pch:not(.pch-cls).pch_2 {margin-top: 1em ;}    /* Set the "spacing" after [crd]. */
+    
+/* Card close "tag" (a punch actually). */
+    .pch-cls {margin-top: 0em ; bottom : 0em ; color: #A0A0A0 ;}     /* Notice I use [em] not [px] for [bottom] position. */
+    .pch-cls::before {content: "\26AA" ; left: -18px ;}  /* [○] Works on both windows XP and Linux? But [⚪] (\26AA) works on Linux for sure.  __ Have to save file to show UTF-8 "encoding"! */
+    .pch-cls + .pch {margin-top: 2em ;}    /* Set the "spacing" after [crd]. */
+
+/* Those punch make spacing tighter, more compact. Good for a long list or yarns-link. */
+    .pch_2 {margin-top: 0.7em ;}
+    .pch_2 + .pch_2 {margin-top: 0em ;}
+    .pch-cls + .pch.pch_2 {margin-top: 1em ;}    /* Set the "spacing" after [crd]. */
+
+/* Meta always put at the front of article, and never put inside the main [card]! */
+    .meta_1 {display: block ; text-align: center ; line-height: 190% ; margin: 25px 300px 30px 300px ; padding-bottom: 2px ; letter-spacing: 0.3em ; text-indent: 2em ;}
+
+    .meta_2 {color: #43ADB5 ; font-size: 3em ; font-weight: bold ; margin : 0 ; transition: all 0.5s ease ; transform: scale(1.0) ;}
+    .meta_2:hover {text-shadow: 0 0 0.6em #BEE5E8 ; transform: scale(1.0) ; letter-spacing: 0.04em ;}
+
+    .meta_3 {color: #A9CDD1 ; font-size: 0.7em ; font-weight: bold ; margin : 0 ; transition: all 0.5s ease ; transform: scale(1.0) ;}
+    .meta_3:hover {text-shadow: 0 0 0.6em #BEE5E8 ; transform: scale(1.0) ; letter-spacing: 0.37em ;}
+    
+    
+/* Hyperlinks and highlights. */
+    a {display: inline; position: relative ; vertical-align: bottom ; transition: border 0s ease 0s ; border-bottom: 0 solid rgba(220,220,220,1) ; }    /* [transform] need to display block or inlinblock ,; [a::after rely on this to work.] */
+    
+    a:link, a:visited  {color: #007C85 ; text-decoration: none ; /*transition: all 0.5s ease 0s ; */}    /* Main hyperlink, [weaver] or external link. */
+    /*a:hover {animation: hyperlink_animation 0.6s ; transform: scale(1.2) ; transform-origin: 30% 50% ; z-index: 2 ; background-color: rgba(255, 255, 255, 0.5) ;}
+        @keyframes hyperlink_animation{
+        0% {transform: translate(0) ; z-index: 2 ; background-color: rgba(255, 255, 255, 0.6) ;}
+        50% {transform: translate(0.3em) ; z-index: 2 ; background-color: rgba(255, 255, 255, 0.6) ;}
+        100% {transform: translate(0) ; z-index: auto ; background-color: transparent ;}
+        } */
+    
+    a:hover {transition: all 0.2s ease 0.2s ; border-bottom: 4px solid rgba(220,220,220,1) ;}
+    
+    a::after {
+        position: absolute ;
+    	top: 100% ;
+    	left: 0 ;
+    	width: 100% ;
+    	height: 4px ;
+    	background: rgba(220, 220, 220, 1) ;
+    	content: '' ;
+    	opacity: 0 ;
+    	transition: opacity 0.2s, transform 0.2s ;
+		transform: translateY(10px) ;
+	}
+	
+    a:hover::after {
+        opacity: 1 ;
+        transform: translateY(0px) ;
+        /*z-index: 1*/
+    }    /* Setting z-index higher then <a> is correct for overlap <a>'s border property, but no need worry since z-index perform well if it greater than -1. */
+    
+    a:focus {outline: none; border: dotted #BBB 0px ; border-bottom: 4px solid rgba(220,220,220,1) ;}
+    
+    .yarns-link, .yarns-link:link, .yarns-link:visited  {color: #825B17 ; text-decoration: none ;}    /* Hyperlink, [yanrs]. .[yarns-link:visited] don't effect, don't know why. */
+    
+    .yarns-link_2 {/* Do nothing, this class just a mark when a yarn be linked twice or more. */}
+    
+    .gh_1 {color: #28822A ; font-size: 1.1rem ;}    /* Highlight, teal, normal used.  __ Mark as normal highlight. */
+    .gh_2 {color: #000 ; font-size: 1.1rem ; font-style: italic ;}    /* Italic, used as quote or little special meaning, less important than [gh_1]. */
+        /* These lines are for [gh_2] perform in <a>, they sightly change the original <a> color. */
+        .gh_2:link, .gh_2:visited, a:link .gh_2, a:visited .gh_2 {color: #004F54 ;}
+        .yarns-link.gh_2, .yarns-link.gh_2:link, .yarns-link.gh_2:visited, .yarns-link .gh_2, .yarns-link:link .gh_2, .yarns-link:visited .gh_2 {color: #543500 ;}
+    
+    .gh_2:after {content: " " ;}
+    .gh_3 {color: #28822A ; background-color: #EEE ; font-size: 1.1rem ;}    /* Highlight, like [gh_1] but with a little grey bg-, main title of multiple [gh_1] "children".
+    __ Used when there are too many highlight_1, and you want to emphasise the "parent" title more.*/
+    .gh_4 {color: #D63A3A ; font-size: 1.1rem ;}    /* Warning, red, indicate here might be something wrong, or mark as strong .notice ,,warning. */
+    .gh_5 {color: #D46504 ; font-size: 1.1rem ;}    /* Notice, orange, mark as notice, not to mean error or anything's going wrong. */
+    .gh_6 {font-weight: bold ;}    /* Bold, used inside <a> tag or other situation, when don't want to bother the bigger span's format. */
+    
+    :target {background-color: #BEE5E8 ; transition: background-color 0.5s ease ;}
+    :target:hover {background-color: #E9F4F5 ;}
+
+
+    
+    .img_1 {width: 200px ; height: auto ;}
+    
+/* [span_img_1] is design for put fix title-image group in the paragraph.
+Please use following format :
+ {{
+    (content ...)
+    </p><span class="span_img_1">(Put image title here ...)<br><img src="../big-pot/E123.png"></span>
+    <p class="p-gnl">(content ...)
+ }}
+*/
+    .span_img_1 {display : inline-block ; text-align : center ;}    /* Deprecate syntax, will eliminate in future. */
+    .span-img_1 {display : inline-block ; text-align : center ;}
+
+/* Text select (mouse drag) color. */
+    ::-moz-selection {
+    background: #BEE5E8 ;
+    color: #444 ;
+    }
+
+    ::selection {
+    background: #BEE5E8 ;
+    color: #444 ;
+    }
+
+
+ 
+/* Below is for golfbelt website.*/
+.index-body nav {margin-left: 0 ; margin-right: 0 ; border: 1px solid #DDD ;}
+.index-body nav ul {display: block ; padding: 0 ; margin-left: auto ; margin-right: auto ; width: 50% ;}
+.index-body nav ul li {display: inline-block ; border-left: 1px solid grey ; padding-left: 1em ; margin-left: 0em ; margin-right: 1em ;}
+.index-body nav ul li:nth-child(1) {border-left: 0 ; padding-left: 1em ; margin-left: 0em ; margin-right: 1em ;}
+
+article {margin: 30px 200px 0 200px ; border-top: 1px solid #DDD ; padding-top: 30px ; padding-bottom: 0 ; }
+article:nth-child(1) {border-top: 0 ; margin-top: 45px ;}
+.atc-title {text-align: left ; margin-top: 0 ; margin-bottom: 0 ; float: left ; color: #888 ; font-size: 1.5em ; }
+.atc-title::before {position: absolute ; left: -45px ; top: 5px ; content: "" ;  display: inline-block ; width: 30px ; height: 24px ; background-image: url('../images/E160320_230721.png') ; background-repeat: no-repeat ; background-position: ; background-size: 100% 100% ;}
+.atc-date {text-align: left ;  margin-top: 0 ; margin-bottom: 20px  ; float: right ; font-style: italic ; color: #555 ;}
+.atc-date + * {clear: both ;}
+
+.index-body .atc-image {width: 40% ; display: block ; margin-left: auto ; margin-right: 0 ;}
+footer {margin:80px 50px ; border-top : 1px solid #DDD ; text-align: center ; color: #555 ;}

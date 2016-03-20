@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../css/css_002.css">
+<link rel="shortcut icon" href="../images/treegb_icon.ico">
+<title>Tech.main</title>
+</head>
+
+<body>
+
+<div class="meta_1">
+    <p class="meta_2">.Tech .main.</p>
+    <p class="meta_3">E160124_212304.</p>
+</div>
+
+
+<div class="crd">
+    <p class="pch">Website&nbsp; __ HTML, CSS, XML, javascript, PHP, MYSQL, ...</p>
+        <div class="crd">
+
+            <p class="pch pch_2"><a href="./E160124_212305.html">HTML.</a></p>
+
+            <p class="pch pch_2"><a href="./E160124_212306.html">CSS.</a></p>
+
+            <p class="pch pch_2"><a href="./E160201_212608.html">Javascript.</a></p>
+
+            <p class="pch pch_2"><a href="./E160124_215939.html">search engine.</a></p>
+        
+            <p class="pch">Static Site Generators.</p>
+                <div class="crd">
+    
+                    <p class="pch">StaticGen - Top Open-Source Static Site Generators.</p>
+                        <p>+<a href="https://www.staticgen.com/">website</a>.<br>
+                        +<a class="yarns-link" href="../yarns/E160131_171035">yanrs. (2016-02-01 保留.)</a></p>
+    
+                    <p class="pch pch_2"><a href="https://youtu.be/U4qWN3d4_Js?t=6m8s">Ditch Your CMS With Git and Static Site Generators</a></p>
+    
+                    <p class="pch pch_2"><a href="https://youtu.be/jeQCoiZT5gg">Static Sites Can be the Solution (Simon Wood)</a>.</p>
+    
+                    <p class="pch pch_2">[<a href="http://www.ifnamemain.com/posts/2014/May/30/pelican_python/">Pelican</a>]. 跑在客戶端. 還有許多其他管理 local site 的功能, 不清楚... 用 Python 寫的.</p>
+    
+                    <p class="pch">Docpad.</p>
+                        <p>+[<a href="https://youtu.be/Zu1uhI0uT2o?list=PLw5h0DiJ-9PCDg5z3oIfakeoPQIfG5aza">Benjamin Lupton - Docpad (part 1/2)</a>]<br>
+                        +(<a href="../big-pot/E160131_185512.png">big-pot</a>).</p>
+          
+                    <p class="pch pch_2">Jekyll 是排名第一的, 但用 Ruby (要安裝 ruby).</p>
+    
+                    <p class="pch pch_2"><a href="https://youtu.be/EqdRW3I7CIc">Selecting the best static site generator for your blog | Pluralsight</a>.</p>
+    
+                    <p class="pch">動態內容 (Dynamic content) 也可以怎麼解決?</p>
+                        <p>+<a href="https://youtu.be/R-fJWOO1bjE?t=6m29s">Comparing Static Site Engines with Brian Rinaldi </a>.<br>
+                        +big-pot : <a href="../big-pot/E160201_075227.png">1. </a><a href="../big-pot/E160201_083530.png">2. </a><a href="../big-pot/E160201_082748.png">3. </a></p>
+    
+                    <p class="pch pch_2">Dropbox 可以 host static website.&nbsp; < (so cool!)</p>
+    
+                    <p class="pch pch_2">Github 不知道可不可以 free host a site.</p>
+    
+                </div>
+            <p class="pch pch-cls">Static Site Generators.</p>
+            
+            <p class="pch"><a href="./E160207_205055.html">Database.</a></p>
+            
+            <p class="pch">Wordpress.</p>
+                <div class="crd">
+                
+                    <p class="pch">.公司 wordpress .asKansweR. (web interface asKansweR, nothing to do with database.)</p>
+                        <p>site title : golfbelt<br>
+                        username : golfbelt_usr<br>
+                        answeR : tdBCztHUiE7A</p>
+                        
+                    <p class="pch">同步資料.&nbsp; __ 2 個主機之間同步資料.</p>
+                        <div class="crd">
+                        
+                            <p class="pch">資料庫.</p>
+                                <p>[mysqldump -u root -p --databases &lt;db&gt; > &lt;output file path&gt;].<br>
+                                [mysql -u root -p <db> < [input file path] ].
+                        
+                            <p class="pch">Wordpress 根目錄.</p>
+                                <p>[sudo rsync -a -Pzh -vv --delete -m  ./ "treegb@111.254.210.159:/var/www/wordpress/"]&nbsp; < (路徑要自己改!)<br>
+                                [sudo chown -R  treegb:www-data wordpress/]<br>
+                                [sudo chmod -R g+w wordpress/].<br>
+                                或<br>
+                                [sudo chown -R treegb:www-data /var/www/html/golfbelt/ ; sudo chmod -R g+w /var/www/html/golfbelt/].&nbsp; < (這是我自己的方法, 不確定這樣做對不對, 不過是可以用.)
+                            
+                            <p class="pch">asKansweR???</p>
+                                <p>不知道哪時候寫的, 也不知道對不對.<br>
+                                [treegb].<br>
+                                [wMvelmsPzTG1].</p>
+                                
+                    </div>
+    
+                    <p class="pch">Wordpress install.</p>
+                        <p>[https://www.digitalocean.com/community/tutorials/how-to-install-wordpress-on-ubuntu-12-04].<br>
+                        [https://www.digitalocean.com/community/tutorials/how-to-install-wordpress-on-ubuntu-14-04].<br>
+                        [https://www.howtoforge.com/centos_wordpress_install].<br>
+                        [https://www.howtoforge.com/centos_wordpress_install].</p>
+                
+                </div>
+        
+            <p class="pch"><a href="https://tfeng.org/?p=4526">【VPS】什麼是VPS? 使用VPS有什麼好處嘛?&nbsp; __ 逐風者.</a></p>
+            
+            <p class="pch">[Webdav].&nbsp; :: FTP, Dropbox.</p>
+                <p>+ 看看就好. 透過 http 分享資料 (包含寫入), similar to local network dirve. "Distributed Authoring and Versioning".&nbsp; __ http.&nbsp; __ 跨作業系統.<br>
+                + 不是有更簡單的 HFS 嗎? 另外還有 NFS, SMB, FTP, SSH. >> 這些都看看就好, 因為雖然 Linux 用一些方法也可以用, 但是不是工業標準.<br>
+                + <a href="https://www.microsoft.com/taiwan/technet/iis/expand/WebDAV.aspx">WebDAV 簡介.</a><br>
+                + <a href="https://youtu.be/KrOrjYa1rwo">What are WebDAV and FTP&nbsp; __ Linda.com.</a></p>
+        
+        </div>
+    <p class="pch pch-cls">Website&nbsp; __ HTML, CSS, XML, javascript, PHP, MYSQL, ...</p>
+    
+    <p class="pch"><a href="./E160229_232814.html">Linux.</a></p>
+        
+    <p class="pch">Utility.</p>
+        <div class="crd">
+        
+            <p class="pch pch_2"><a href="https://jiemr.com/adobe-cc-recommended-reason">Adobe.&nbsp; __ 入手 Adobe CC 的十大理由與常見問與答.</a></p>
+            
+            <p class="pch pch_2"><a href="./E160301_010707.html">Blender.</a></p>
+            
+            <p class="pch pch_2"><a href="https://youtu.be/FtieBc3KptU">.Emacs .org-mode.</a></p>
+                <p>很多功能, 包括匯出 HTML, PDF table 操作, 很多標記語法 ... 請到 youtube 搜尋.<br>
+                Github 看到後期都沒有開發? 是否是正式合併到 Emacs 功能裡面??</p>
+            
+            <p class="pch pch_2"><a href="http://www.extendoffice.com/documents/excel/1172-excel-transpose-multiple-columns-into-one-column.html">Excel.&nbsp; __ excel to cvs 1 line.</a></p>
+            
+            <p class="pch pch_2"><a href="http://aplawrence.com/CS/mailserver.html">"Gmail".&nbsp; __ Why run your own mail server?</a></p>
+            
+            <p class="pch pch_2"><a href="./E160124_221905.html">Firefox.</a></p>
+
+            <p class="pch pch_2"><a href="http://www.tagspaces.org/demo/">Tagspaces.</a>&nbsp; __ 很有潛力, 功能很吸引人, 不過開發者只有 5 人, 太少了.</p>
+            
+            <p class="pch pch_2"><a href="./E160228_134057.html">VLC.</a></p>
+            
+            
+            
+            
+            
+            
+            
+        </div>
+</div>
+
+</body>
+</html>

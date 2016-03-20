@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../css/css_002.css">
+<link rel="shortcut icon" href="../images/treegb_icon.ico">
+<title>[Bash]</title>
+</head>
+
+<body>
+
+<div class="meta_1">
+    <p class="meta_2">Bash.</p>
+    <p class="meta_3">E160319_084254</p>
+</div>
+
+
+<div class="crd">
+    <div>
+    
+        <p class="pch">資料流重導向.&nbsp; :: I/O Redirection, stdout, stderr, pipe, output.</p>
+            <p>我在用 rsync 的時候, 常常要在螢幕顯示輸出, 同時也用 tee 輸出到檔案, 而寫 stdout, stderr 2 個都要.<br>
+            我參考 <a href="http://stackoverflow.com/questions/692000/how-do-i-write-stderr-to-a-file-while-using-tee-with-a-pipe">stackoverflow - How do I write stderr to a file while using “tee” with a pipe?</a> 的用法, 可以用這樣 :<br>
+            {{sudo rsync -a -Pzhm -vv --delete -f '-sr_/lost+found' --dry-run /mnt/core/core.1/rt-/ /mnt/core.ext/core.1/rt-/ 1> >(tee /tmp/tmp/rsync.core.1.ext.stdout) 2> >(tee /tmp/tmp/rsync.core.1.ext.stderr)}}.</p>
+            
+            <p>我知道這樣可以成功但不知道為什麼, 直到我看到 <a href="http://superuser.com/questions/342982/is-there-a-binary-safe-triple-less-than-operator-in-bash">superuser - Is there a binary-safe “triple less than” <<< operator in bash?</a> 的用法.<br>
+            整體意思是, {{COMMAND_WITH_BIN_INPUT <(uudecode <(echo "$uuEncodedData"))}} 的效果類似 {{echo "$uuEncodedData" | uudecode | COMMAND_WITH_BIN_INPUT}}.</p>
+            
+            <p>後來找到這個語法的名字, 叫做 <a href="http://tldp.org/LDP/abs/html/process-sub.html">Process Substitution.</a><br>
+            關於 Process Substitution, 可見<a href="http://stackoverflow.com/questions/13726764/bash-script-while-loop-subshell-dilemma">這個</a>, dogbane 的回答.</p>
+
+        <p class="pch"><a href="../yarns/E160319_105156" class="yarns-link">柏青哥 - shell script 簡易 .用法 ,,規則.</a></p>
+        
+        <p class="pch"><a href="http://askubuntu.com/questions/29370/how-to-check-if-a-command-succeeded">How to check if a command succeeded?</a></p>
+        
+        <p class="pch"><a href="http://unix.stackexchange.com/questions/22726/how-to-conditionally-do-something-if-a-command-succeeded-or-failed">How to conditionally do something if a command succeeded or failed?</a></p>
+
+        <p class="pch">Compound commands. __ *[<span class="gh_1">$( )</span>]*, *[<span class="gh_1">( )</span>]*, *[<span class="gh_1">{ }</span>]*.</p>
+            <div class="crd">
+            
+                <p class="pch">*[$( )]*, *[( )]*, *[{ }]* 是 3 個不一樣的東西.不能搞混.</p>
+            
+                <p class="pch">*[<span class="gh_1">{ }</span>]*.</p>
+                    <p>可以 [ [man bash] > [/] [Compound Commands] ], 它好像被稱作 "group command".<br>
+                    它並不會產生 subshell，這是它的重點，也就是變數那些都可以保留下來，而且都和現在的環境接軌.<br>
+                    它的用途只是在於把容易搞混的一長串 command 文法， group 起來. 有時候一條 command 裡面有很多 [&&], [||] 的時候也可以用 *[{ }]* 來確保執行的結果符合我所希望的那樣.<br>
+                    它的文法像這樣: [foo-command <span class="gh_5">{</span> foo-command<span class="gh_5">; }</span> foo-command]. 沒錯，括號內部<span class="gh_5">兩邊都要留空格</span>.</p>
+            
+                <p class="pch">*[<span class="gh_1">$( )</span>]*.</p>
+                    <p>Command substitution. 它代表在一條 command 裡面，該位置，所表示的字串 (string).<br>
+                    它執行後得到的結果，會變成整條 command 的一部分. 比如說:<br>
+                    &nbsp;{{<br>
+                    [var_1='/home']<br>
+                    [var_2='/treegb/']<br>
+                    [ls -al $(echo $var_1)$(echo $var_2)]<br>
+                    &nbsp;}}<br>
+                    就會顯示 :</p>
+                
+                    <p class="p-pre_2 p-mono">&nbsp;{{<br
+                    >總計 41984396<br
+                    >drwxr-xr-x 32 treegb treegb        4096 12月 23 03:25 .<br
+                    >drwxr-xr-x  3 root   root          4096 12月 20 17:34 ..<br
+                    >drwx------  3 treegb treegb        4096 12月 21 06:56 .adobe<br
+                    >drwx------  2 treegb treegb        4096 12月 22 08:16 .aptitude<br
+                    >-rw-------  1 treegb treegb       14248 12月 23 03:25 .bash_history<br
+                    >-rw-r--r--  1 treegb treegb         220 12月 20 17:34 .bash_logout<br
+                    >-rw-r--r--  1 treegb treegb         198 12月 22 06:56 .bash_profile<br
+                    >&nbsp;}}.</p>
+                    
+                    <p>這個例子相當好理解，清楚表達 *[$( )]* 就是代表一條命令上的某一個位置，的字串，的意思. 雖然都用到 subshell，但意義跟 *[( )]* 完全不一樣.<br>
+                    另外，我在練習設定 [$LS_COLORS] 的時候，發現把 [eval $(dircolors -b ~/.dircolorsrc)] 拿掉 [eval]，命令會不成功， [bash] 不認為它是一道命令.<br>
+                    所以我覺的，相當可能， *[$( )]* 不能作為整到命令的最前面 (命令名稱). 如果要這樣寫，要加 [eval].</p>
+            
+                <p class="pch">*[<span class="gh_1">( )</span>]*.</p>
+                    <p>就是完全代表 subshell，例 :</p>
+            
+                    <p>&nbsp;{{<br>
+                    在 [./main.sh] 的內容 :<br>
+                    [(./sub-shell.sh) && echo '/dev/loop found.' || echo '/dev/loop not found']</p>
+                
+                    <p>在 [./sub-shell.sh] 的內容：<br>
+                    [test -b /dev/mapper/core.1]</p>
+                
+                    <p>然後 [~/main.sh].<br>
+                    如果這時 [~/core.1] 是 decrypt 的，就會得到結果 [/dev/loop found.].<br>
+                    如果這時 [~/core.1] 是 encrypt 的，就會得到結果 [/dev/loop not found.].<br>
+                    &nbsp;}}</p>
+                
+                    <p>[test] 所回傳的結果要麼是 0 要麼是 1 ，而整條 command 就開始判斷：<br>
+                    0 是成功，就 [echo '/dev/loop found.'] 而忽略 [echo '/dev/loop not found'].<br>
+                    1 是失敗，就忽略 [echo '/dev/loop found.'] 而執行 [echo '/dev/loop not found'].<br>
+                    如果這時是用 [$(./sub-shell.sh)]" ，雖然也是可以執行成功，但是如果今天不是像這個範例使用回傳值，而是一個 string，那 *[$( )]* 就會把回傳的 string 直接餵回原來的 command line，然後整條 command line 還以為這個 string 是一個 command 的名稱，結果就會發生類似 [no such command: ... ] 之類的錯誤.</p>
+            
+                <p class="pch">subshell.</p>
+                <p>*[( )]* 和 *[$( )]* 都會產生 subshell，但是差別在於， *[( )]* 會把目前的環境的變數，都 export 給 subshell，這是我推薦的地方.<br>
+                至於 *[$( )]* 就不會這樣，不會取得目前環境的變數. 只是在別的地方另開一個不相干的 subshell，然後代表一個 string 回來變成整條 command 的一部分.<br>
+                *[( )]* 和 *[$( )]* 兩者因為是比 {parent shell} 更上層的 subshell，所以裡面的變數也不會保留回來給 {parent shell}.<br>
+                即使是原本就在 {parent shell} 裡面的變數，經過 subshell 修改後，只會在 subshell 產生效果，不會保留到 {parent shell}.</p>
+            
+                <p>總之，兩者是不一樣的功能，有不一樣的作用. 另外，*[$( )]* 跟 "[` `]" 是一樣的東西.</p>
+        
+            </div class="crd">
+        <p class="pch pch-cls">Compound commands. __ *[<span class="gh_1">$( )</span>]*, *[<span class="gh_1">( )</span>]*, *[<span class="gh_1">{ }</span>]*.</p>
+
+    </div>
+    
+    <p class="pch" id="E160319_125335">eval.</p>
+        <p>eval 太難摸清楚了... 現階段不必了解 eval 的 "原理", 只需要知道 "怎麼用可以成功" 就可以了!<br>
+        例下面這個 command :<br>
+        {{<span class="gh_1">eval</span> cygstart "\"/cygdrive/c/Program Files/Notepad++/notepad++.exe\"" <span class="gh_1">"\"</span>$(cygpath -w "${protocol_url}")<span class="gh_1">\""</span>}}<br>
+        的 <span class="gh_1">$()</span> 外面如果要再包引號, 不能直接包 (2 層), 也不能用單引號 (裡面有變數)<br>
+        , 就要用 <span class="gh_1">eval</span>, 配合 <span class="gh_1">"\"$(inside-command-with "${argument-might-having-spaces}")\""</span> 的方式, 讓裡外的引號都可以正常作用.<br>
+        可參考 <a href="http://stackoverflow.com/questions/5253782/bash-problem-with-eval-variables-and-quotes">Stacoverflow - Bash problem with eval, variables and quotes.</a> (不過他的解釋不能理解, 是可以用, 但是解釋是否正確?)</p>
+
+        <p>另外, 經過測試 :<br>
+        &nbsp;{{<br>
+        var_foo=$4<br>
+        var_bar=$(echo apple | sed 's/pp/PP/g')<br>
+        &nbsp;}}<br>
+        不必寫成<br>
+        &nbsp;{{<br>
+        var_foo="$4"<br>
+        var_bar="$(echo apple | sed 's/pp/PP/g')"<br>
+        &nbsp;}}<br>
+        它的語法即使沒有引號, 遇到 multiple spaces 也可以保留下來.
+        </p>
+    
+    
+</div>
+
+
+<p class="p-pre">
+<span class="gh_5">--  Below is old note.</span>
+
+<多層引號.>
+
+    @
+    有些情況下，會用到兩層引號。
+
+    我先示範一層引號，裡頭包含字串 "pattern" :
+    ['pattern'] (只有一層引號的情況下)。
+
+    有兩層引號，其中第二曾引號才包含字串 "pattern" 像這樣 :
+    [' 'pattern' ']     但兩層引號間其實沒有間距，真正會像這樣 :
+    [''pattern'']
+
+    當使用兩層引號，系統有時後會沒辦法知道究竟是要表達
+    { {pattern} }
+    還是
+    {} pattern {}
+
+    ，所以最好用以下方法解決：
+
+
+    <?>
+
+        @ 不一樣的引號.
+        這個方法是用雙引號和單引號做區別，但是缺點是只能用小於 3 層的引號數量 （許可以用到超過 3 層以上，但是即使這樣，也很難理解）：
+        '"pattern"'
+
+        @ 愈內層的引號，用的數量愈多.
+        以單引號做例子，最外面一層用，第 2 層用 2 次，第 3 層用 3 次 :
+        ' ''pattern'' '   (實際上不會有間距，會像'''pattern''')
+        或是
+        ' ''apple'' ''bear '''andcat''' '' '   (實際上不會有間距，會像'''apple''''bear'''andcat'''''')
+        總之先留間距，先讓自己看得懂，最後在刪掉，系統會自己去解讀不管他。
+
+        @ 但是這個方法可能不是每個地方都行得通，像 <awk> 可能是因為最外面規定要用單引號的關係，沒辦法這樣用。
+
+    </?>
+
+
+</多層引號.>
+
+
+<EXPANSION.>
+
+    @ 導.
+    [bash] 內建的表式示 (expression) ，類似像正規表示法，可是是不一樣的東西. 有很多不一樣的功能.
+    詳細內容請 [ [man bash] >  [/] [^EXPANSION] ]，搜尋開頭是大寫的 EXPANSION 段落. 內容有點多.
+
+    @
+    用 "[~-/<current path>]"可以表達舊的 [pwd] 路徑，也就是上一次的工作目錄.
+    比如我先 [cd] 到 [/tmp] 下確認有 test.txt 這個檔案； 再 [cd] 到 [/mnt/sdb1/tmp] 下確認檔案是要放在這個目錄；最後就
+    [mv ~-/test.txt .] 這樣就可以把檔案從 [/tmp] 下移到 [/mnt/sdb1/tmp] 下.
+
+     [1]
+    If the extglob shell option is enabled using the shopt builtin, several extended  pattern  matching  operators  are
+    recognized.  In the following description, a pattern-list is a list of one or more patterns separated by a |.  Com‐
+    posite patterns may be formed using one or more of the following sub-patterns:
+
+                  ?(pattern-list)
+                         Matches zero or one occurrence of the given patterns
+                  *(pattern-list)
+                         Matches zero or more occurrences of the given patterns
+                  +(pattern-list)
+                         Matches one or more occurrences of the given patterns
+                  @(pattern-list)
+                         Matches one of the given patterns
+                  !(pattern-list)
+                         Matches anything except one of the given patterns
+
+    試過 Debian 的 [bash] 了，用這些 expression 沒有問題，比如說 "[ls ...]" .
+
+</EXPANSION.>
+
+
+@ [$IFS].
+底下 [~/.bash_aliases] 區塊有提到，可以直接參考它.
+
+另外，如果要使用一個帶有空格的路徑，而且又用引號把每個路徑分別引號起來，那原本用來跳脫 { 空格,大括號,圓形括號, } 的反斜線，都要拿掉. 比如像這樣：
+[cd "not yet {learned.absorb} knowledge/"].
+
+@ 跳脫字元.
+有一些特殊字元，比如 [ ],[{],[#[],[#,] ，當檔名有這些字元時可以用 tab completion 自動在這些字元前面補上跳脫字元. 當命令執行時， bash 會去 parse 它的意思.
+但是，這不代表可以反向使用. 什麼意思呢？ 比如下面這樣是行不通的：
+[var_1='/tmp/tmp/test\ file']
+[find $(echo "$var") -print]
+我嘗試預先考慮之後出現在 [find] 命令裡面的路徑，檔名有可能會包含空白，所以我預先加入跳脫字元.
+但是事實上這樣是不能用的. 我不知道為什麼. 最後只能：
+[var_1='/tmp/tmp/test file']
+[find "$(echo "$var")" -print].
+
+
+<alias.>
+
+    @ 可以放在家目錄的 [~/.bash_aliases] 這裡面，不過我之後都不會放這裡了.
+    如果暫時不想要使用 alias 後的 command 版本，可以用 "[\<command>]" ，這樣 <command> 就不再是 alias 後的那個版本了.
+    alias 可以使用小數點 [.].
+
+    @ 函式.
+    可以使用函式，例如：
+    {{
+    cd..l ()
+    {
+    cd ..
+    ls -1AF -sh --group-directories-first --color=always | sed '$a \ '
+    }
+    }}
+    上面也有人是用 "[function <function name> () ... ]"
+
+    function 用 [alias] 是查不到的，但是跟 alias 一樣是可以直接下在 terminal 上面的.
+
+    [export -f] 可以 export 函式.
+
+    function 強大的地方在於，它就是預先設定你在當下 bash 環境下，做的所有事，所以如果 function 裡面有 [exit] ，執行該 function 會直接關掉目前的 shell ！
+    如果要在 function 裡面使用 [exit] ，記得一定要把 [exit] 還有那些 command 都用 "[( )]" subshell 功能括號起來.
+    不然可以用 [return] ，[return] 一樣不會繼續執行該 shell 那個地方底下的任何內容，只是它不會關掉你的 parent shell.
+
+
+    <空白檔名.>
+
+        @ 設定 alias 大致上不會有什麼問題，但是有一個地方要特別注意，空白檔名.
+        我今天的 [~/.bash_aliases] 長這樣：
+
+        {{
+        l ()
+        {
+        ls -1AF -sh --group-directories-first --color=always $@ | sed '$a \ '
+        }
+        }}
+
+        當我要 [ls] 一個階層很深的檔案時，而且路徑中間至少包含一個空白，就會像這樣：
+        {{
+        [l ./my\ script/receipt.award.code/receipt.award.code/receipt.award.code.list/103\ \{05..06\}\ .txt]
+        ls: 無法存取 ./my: 沒有此一檔案或目錄
+        ls: 無法存取 script/receipt.award.code/receipt.award.code/receipt.award.code.list/103: 沒有此一檔案或目錄
+        ls: 無法存取 {05..06}: 沒有此一檔案或目錄
+        ls: 無法存取 .txt: 沒有此一檔案或目錄
+        }}
+
+        看到了嗎？這個的路徑，裡面包含 3 個空白，所以因為 [$IFS] 的關係，路徑被誤解成四個參數，於是 [ls] 就找不到了.
+
+        要解決這個問題，把 [$IFS] 的空白 "拿掉" (保留 [\t] [\n] 沒關係.)，像這樣：
+        {{
+        l ()
+        {
+        IFS=$'\n\t'
+        ls -1AF -sh --group-directories-first --color=always $@ | sed '$a \ '
+        IFS=$' \n\t'
+        }
+        }}
+
+        {{
+        [l ./my\ script/receipt.award.code/receipt.award.code/receipt.award.code.list/103\ \{05..06\}\ .txt]
+        4.0K ./my script/receipt.award.code/receipt.award.code/receipt.award.code.list/103 {05..06} .txt
+        }}
+        就可以正常使用 [ls] 了.
+        注意 2 點:
+        1. [$IFS] 設定的方法是 [IFS=$'\n\t'] 不是 [IFS='\n\t']！
+        2. 在函式結束的地方，[$IFS] 要改回正常的，也就是加入 [IFS=$' \n\t'].
+
+        @ 解釋.
+        為什麼上面那個例子，把 [$IFS] 設為空白就可以正常使用了呢？
+        我先解釋一下這個 {alias 命令} 從輸入到 terminal 開始到結果輸出在螢幕上，的流程.
+
+        首先
+        [l ./my\ script/receipt.award.code/receipt.award.code/receipt.award.code.list/103\ \{05..06\}\ .txt]
+        這整條命令的 { [$@],[$*] } 應該是
+        "./my script/receipt.award.code/receipt.award.code/receipt.award.code.list/103 {05..06} .txt".
+        （事實上，因為這整條命令的參數數量只有 1，因為 "[l ()]" 只列了 1 個檔案而不是很多個. 所以 { [$@],[$*] } 的結果會是一樣的，但是多個參就不一定是這樣了. 雖然在 "[l ()]" 這個 function 我測試過，兩個都可以正常一次顯示多個檔案，但我還是建議永遠保持使用 [$@] 的習慣.）
+
+        所以 "[l ()]" 這個 function 在使用 [$@] 時，會轉變成以下命令：
+
+        [ls -1AF -sh --group-directories-first --color=always ./my script/receipt.award.code/receipt.award.code/receipt.award.code.list/103 {05..06} .txt | sed '$a \ ']
+
+        如果把 [$IFS] 的 {空白} delimiter 拿掉，空白再也不是參數的分隔依據，在 [$@] 輸入到新的命令裡面時，空白就不會被當成 delimiter，把原本的參數當成多個參數做分割.
+
+    </空白檔名.>
+
+
+    @ 不要忘記 .
+    設定完後，如果要即時的在 "已經開啟" 的 shell 看 alias 的結果的話，不要忘記 [. ~/.bash_aliases] 或 [source ~/.bash_aliases].
+
+</alias.>
+
+
+<一些小技巧.>
+
+    @ 用 [echo $$] 可以看到目前 bash 的 pid.
+
+    @ [ctrl + <lift or right arrow key>] 可以快速左右移動游標.
+
+    @ history.
+
+    [!<number>] : 使用 [history] 命令列出的第幾道命令.
+    [!*] : 使用上一道命令的所有參數（不包含命令）.
+    [!!] : 上一道命令.
+    [^<old pattern>^<new pattern>^] : 如果第 321 道命令打錯成 [sduo losetup -a || sduo losetup /dev/loop0 ...] ，那可以用 [^sduo^sudo^] 一次改兩個打錯的 "sudo".
+    [!609:2] : 使用第 609 到命令的 第 2 個參數. 第 0 個參數是 command name. 用 [!609:*] 來使用 {除了命令以外的後面所有參數}. 這個用法對我沒有意義，我只是知道後就把它記下來而已.
+    [!514:p] : 很實用，當用 [history] 列出來後，不想執行 "514"，因為還要修改，那就可以用 [!514:p] 先把它 print 出來（不會執行），uparrow，然後再修改.
+
+    關於更詳細的功能，要 [man history].
+
+    @ [pushd],[popd],[dirs].
+    這三個 command 可以快速 navigate 最近常用的目錄，幫助記憶而且快速 nevigate.
+    [pushd] ：記憶目標目錄到 stack，而且跳過去.
+    [popd] :跳過目標目錄，而且清除 stack 裡面該目錄的記憶.
+    [pushd] 和 [popd] 可配合 [ [+],,[-] <number> ] 使用，<number> 可以是 0~ ... . 也可以使用 [-n].
+    [dirs] ：查看 stack. 可配合 [-v] 用.
+
+</一些小技巧.>
+
+
+@ [return],[exit]
+[return],[exit]，不過兩個都會回傳一個 {回傳值}，而且之後可以用 [$?] 這個變數來得知回傳值.
+如果要讓 command 中間在某些情況中止，可以用 [exit 1]. [exit 0] 並不會中止後來的步驟，只有 [exit 1] 或 1 以上才會.
+而 [return]，我猜是不管 {回傳值} 是多少，都只會中止目前的 {shell,function,subshell}， 而接下來的步驟會繼續跑.
+
+@ [if] statement 的正規表示法.
+不一定要 [if]，其他 statements 都一樣，都可以使用 {延伸正規表示法}. 例如：
+
+{{
+if [[ "$var_1" =~ ^([yY]|yes|Yes|YES)$ ]] ; then ...
+
+while [[ "$var_1" =~ ^p{,3}oeconf$ ]] ; then ...
+
+if [[ "$var_1" =~ ^/tmp/this\ is\ a\ test\ file\.3$ ]] ; then ...
+}}
+
+注意，上面的格式很嚴謹， {拿掉一個中括號，,變數不加引號,，正規表示法多加引號,，正規表示法沒有 "[^$]",,正規表示法沒有跳脫空格} 都會造成錯誤！
+
+
+@ [--].
+{{
+A [--] signals  the  end  of options and disables further option processing.  Any arguments after the -- are treated as filenames and arguments.  An argument of - is equivalent to --.
+}}
+
+{{
+What does “--” (double-dash) mean? (also known as “bare double dash”)?
+More precisely, a double dash (--) is used in bash built-in commands and many other commands to signify the end of command options, after which only positional parameters are accepted.
+
+Example use: lets say you want to grep a file for the string "-v" - normally "-v" will be considered the option to reverse the matching meaning (only show lines that do not match), but with -- you can grep for "-v" like this:
+[grep -- -v file]
+}}
+
+{{
+The double dash "--" means "end of command line flags" i.e. it tells ssh command not to try to parse what comes after command line options.
+}}
+
+@ 亂碼.tty.
+當需要用到 tty，有些中文目錄會亂碼，亂碼的時候連進去的指令都沒辦法下，解決方法如下 ：
+[ls -ali] << (找到想要進入的目錄的 inode number).
+[cd "$(find ./* -inum <inode> -print0)"] << (注意那個引號，如果沒有引號目錄可能還是會進不去. 我不知道是不是因為檔名空格的關係. [-print0] 可以省略.).
+我建議重要的存取目錄，不要用中文命名才是解決之道，雖然有一些 tty 套件可以顯示中文.
+
+
+@ tab completion 異常.
+有一次，發現某一個檔案系統根目錄下的資料夾（這個資料夾有空白檔名），下下面的資料，用 [tab] 顯示不出來，一直跳出奇怪的 backslash 好幾個.
+搞了半天才知道，原來是裡面的目錄，有空白開頭的檔名，更正後，就沒事了.
+
+</p>
+
+</body>
+</html>

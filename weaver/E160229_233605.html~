@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../css/css_002.css">
+<link rel="shortcut icon" href="../images/treegb_icon.ico">
+<title>vim</title>
+</head>
+
+<body>
+
+<div class="meta_1">
+    <p class="meta_2">.command .vim.</p>
+    <p class="meta_3">E160229_233605</p>
+</div>
+
+
+<div class="crd">
+
+    <p class="pch"><a href="http://vim.wikia.com/wiki/Replace_a_word_with_yanked_text">Replace a word with yanked text.</a></p>
+    
+    <p class="pch"><a href="../yarns/E160229_234211" class="yarns-link">大家來學VIM. set 功能設定</a>.</p>
+    
+</div>
+
+
+<p class="p-pre">
+<span class="gh_1">(舊的文件).</span>
+-- [vim] 的 [man page] poor 的可憐，執行 [vimtutor]，可以用 [vim] 修改唯讀的教學檔，做 [簡單練習,馬上了解].
+
+-- 進階, 詳細功能.
+想要進階了解，在 [vim] 裡面輸入 [:help]，會打開一個說明文件（概覽）。
+此文件的路徑在 [/usr/share/vim/vim73/doc/help.txt].
+而 [/usr/share/vim/vim73/doc/help.txt] 只是 [/usr/share/vim/vim73/doc/] 下面的一個文件，它牽涉到該目錄下的其他文件.
+所以可以進階參考 [/usr/share/vim/vim73/doc/] 下的內容，就知道我說的是什麼意思了.
+
+在 [/usr/share/vim/vim73/doc/help.txt] 裡面，可以看到很多 <子文件的名稱>, ( ... .txt 的)
+，用 [:help <該文件名稱> ] 直接去打開它。（沒錯，照作就是了，這是 [vim] 內建的幫助功能）.
+比如 [:help user-manual], [:help user_toc.txt].
+
+上面不是標準的作法。比較標準的作法是把 cursor 移到某些特定的 {進入點.tags} ，再用 { *[Ctrl + #]*,{ [Ctrl + o],,[Ctrl + t] } } 去連結瀏覽.
+也可以 [:set mouse=a] 然後就可以用滑鼠雙擊連結.
+詳細內容還是要自己看 { [vim] [:help] }.
+
+-- [cw]
+修改該字（word），用 [cc] 修改該行.
+
+-- [ ctrl + <arrow key> ]  < (Debian Jessie 好像沒有效 (好事), 之前的有用.)
+一次刪掉一整個段落. 用 [ shift + <arrow key> ] 刪掉一整行.
+
+-- [Ctrl + g]
+顯示該行的資訊（ {行號,總行數,百分比,.. } ）。在 [vi] 才會用到吧，因為 [vi] 沒有 "message bar".
+
+-- [J],, [Shift + j].
+把兩行合併成一行 (下面行合併到此行). 在 [vi] 沒辦法用 [Backspace] 做出跟 [vim] 一樣效果。
+
+-- 垂直插入內容. [shift + i].
+假設今天有一個垂直的欄位 (column)，整條我要修改，在前面加上 "#"，那我可以
+{{
+First, move the cursor to the first char of the first line in block code you want to comment, then type:
+[ctrl + v]
+then vim will go in to VISUAL BLOCK mode. Use j to move the cursor down until you reach the last line of your code block. Then type:
+[shift + i]
+now vim go to INSERT mode and the cursor is at the first char of the firts line. Finally, type # then ESC and the code block is now commented.
+}}
+這樣就可以一次註解很多行在開頭的地方. 或用 [x,y s///g].
+另外，也有 [shirt + a].
+
+
+.< [s///g], { {搜尋,，取代} 功能 }. >.
+    -- 可以用正規表示法，可是預設是基礎正規表示法. 要使用延伸正規，要多使用反斜線 [\].
+
+    -- [%s/old/new/gc].
+    那個 [%] 的意思跟用 [1,$] 一樣，就是代表所有 "address".
+    [c] 是 confirm 的意思，修改前要先給我確認過.
+    <old> 是放要尋找的 pattern，可以配合一種特殊用法，{ [\<],[\>] }.
+
+    例如：
+    [\<old] 代表 任意一個以 "old" 為開頭的 {單詞.單字}，有可能是 "oldman".
+    [old\>] 代表 任意一個以 "old" 為結尾的[單詞..單字]，有可能是 "veryold".
+    [\<old\>] 代表明確的指示 "old" 這個 {單詞.單字}.
+
+    注意，這種用法所認定的 {單詞.單字} 不一定要用空格分隔才算是一個 {單詞.單字}，可以是 { "-",":","@" } 或是其他我不知道的符號！
+    比如說 "user@hostname" 的 "hostname" 雖然是跟 "user" 連在一起，可是如果用 <%s/\<host/hxst/g>
+    , 還是會被選取到且取代成 "user@hxstname" ！ 因為 "@" 被認為是分隔 {單詞.單字} 的符號.
+
+    -- {複雜 .. 進階} 修改.
+    以下內容是參考 doc 的.
+    
+     {{
+    You have a list of names in this form:
+
+            Doe, John
+            Smith, Peter
+
+    You want to change that to:
+
+            John Doe
+            Peter Smith
+
+    This can be done with just one command:
+
+            :%s/\([^,]*\), \(.*\)/\2 \1/
+     }}
+    
+    我不知道為什麼最後面沒有加g，但是我試過加了好像也可以正確的修改.
+    要看完整文件，請 "[ [vim] [:] [help 12.2] ]".
+
+    -- {批次執行動作 .. record 功能}.
+    這跟 [.] 是不一樣的，[.] 只能重複上一個動作
+    ，如果今天有一連串動作，而且要重複執行，就要用到 "record" 功能.
+    即先把該連串動作記錄下來，然後結束 record，最後執行這個設計過的步驟。
+    以下內容是參考 doc 的.
+    
+     {{
+    Suppose you want to replace a word in more than one file.  You could edit each
+    file and type the command manually.  It's a lot faster to use record and
+    playback.
+       Let's assume you have a directory with C++ files, all ending in ".cpp".
+    There is a function called "GetResp" that you want to rename to "GetAnswer".
+
+            vim *.cpp               Start Vim, defining the argument list to
+                                    contain all the C++ files.  You are now in the
+                                    first file.
+            qq                      Start recording into the q register
+            :%s/\<GetResp\>/GetAnswer/g
+                                    Do the replacements in the first file.
+            :wnext                  Write this file and move to the next one.
+            q                       Stop recording.
+            @q                      Execute the q register.  This will replay the
+                                    substitution and ":wnext".  You can verify
+                                    that this doesn't produce an error message.
+            999@q                   Execute the q register on the remaining files.
+     }}
+     
+    要看完整文件，請 *( [vim] >> [:] >> [help 12.1] >> [/] >> [REPLACING IN SEVERAL FILES] >> [Enter] )*.
+
+    -- Search across multiple lines.
+    比如像
+
+     {{
+    apple juice
+    bear
+    apple pie
+    cat
+     }}
+     
+    , 如果要把 [apple juice] 下面那行，換成 cocacola, 可以用
+    *[:s/\(apple juice[\n]\).*/\1cocacola/g]*.
+
+    如果要取代的地方需要放 "跳行", 不能用 [\n], 要用 [\r].
+*< [s///g], { {搜尋,，取代} 功能 }. >*
+
+
+-- 把特定行寫入某檔案.
+"[ <line-x> [,] <line-y> { [],,[ ] } [w] _ <file-to-be-write> ]".
+[x,y w file].
+把 <x> 行到 <y> 行寫進 <file> 裡面.
+
+-- 刪除特定行.
+[x,yd].
+把 x 行到 y 行刪掉.
+
+-- 使用滑鼠.
+[:set mouse=a].
+
+-- 刪除一個單字.
+在 "insert mode" 裡面，直接 [Ctrl + w].
+小提醒，只會刪除單字的左半部，右半部會留下來，除非游標位置是在單字的最右邊。
+
+-- 搜尋.
+配合正規表示法，我示範一個模糊搜尋的方法，這種方法用在當我忘記正確名字是什麼時，我用 "盡量去猜" 的方式去找.
+
+[/apple\(\| pie\| cake\)]
+
+可以同時找到:
+
+apple
+apple pie
+apple cake.
+
+-- 多檔案編輯.
+當用 [vim] 開啟多個檔案，可以用以下指令:
+{ [:ls],[:files],[:buffers] } : 列出目前所開的檔案.
+{ [:bn],[:n],[:next] } : 切換到下一個檔案. (只有) [:bn] 和 [:bp] 可以 loop. 後面可以接數字.
+{ [:bp],[:N],[:previous] } : 切換到上一個檔案. 後面可以接數字.
+{ [:] [b] [tab] } : 可以用 tab completion show 出想要去的 buffer.
+{ [:e filename],[:edit filename] } : 開啟一個 buffer, 檔名叫 filename.
+[:bd] : 刪除目前 buffer. 只是刪除 buffer，硬碟上的資料不會被刪除!
+
+-- 瀏覽檔案系統.
+[vim]還有一個意外的功能，就是可以像 [ranger] 那樣瀏覽目錄. 所以當我發現有一個目錄下的某一個檔案，亂碼沒辦法刪它，我可以 [vim <path>] 到該目錄下去，進行一些操作！
+
+-- { [indent].[breakindent] }.
+這是一個很重要的功能，可是它好像是 patch, 2014 才有的. Debian 預設的 vim 不能 [:set breakindent] 的.
+當某行 -很長, 超過螢幕寬度..它的開頭是 indent 的-, 那原本被 wrap 的第二行, 會從最左邊開始顯示，而不是第一行 indent 的地方. 這是一個問題.
+
+[geany] 可以作到, 而沒有這個 patch 的 [vim] 和 [gedit] 都做不到.
+我不確定可不可以裝, 如果要的話可以參考 [https://retracile.net/wiki/VimBreakIndent].
+
+另外可以用 [:set showbreak=####################] 的方式, 當有一行被 wrap 了，它就會顯示像這樣 :
+ {{
+        applefffffffffffffffffffffffffffffffffffffffff| <<(螢幕邊界)
+####################fffffffffffffffff.                | <<(螢幕邊界)
+ }}.
+
+-- 用空格取代 tab.
+[:set expandtab].
+[:set tabstop=4].
+[:set shiftwidth=4].
+[:retab] : 把現有文件的 tab 取代成空格.
+
+-- 縮排.
+離開 inset mode 後可以 :
+
+ {{
+In Vim in Linux you can unindent multiple lines by using V to select your first line. Press the down arrow to select multiple lines.
+Then type < to unindent all of the lines.
+If you want to indent, type > instead
+ }}.
+
+</p>
+
+</body>
+</html>
