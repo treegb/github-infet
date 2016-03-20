@@ -146,7 +146,7 @@ Please use following format :
  
 /* Below is for golfbelt website.*/
 body {background-image: url('../big-pot/E160321_001350.jpg') ; background-repeat: no-repeat ; background-attachment: fixed ;}
-.index-body nav {margin-left: 0 ; margin-right: 0 ; border: 1px solid #444 ;}
+.index-body nav {margin-left: 0 ; margin-right: 0 ; border-top: 1px solid #444 ; border-bottom: 1px solid #444 ;}
 
 /* Useless. */
 /*.index-body nav ul {display: block ; padding: 0 ; margin-left: auto ; margin-right: auto ; width: 60% ;}

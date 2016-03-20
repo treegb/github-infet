@@ -163,7 +163,7 @@ body {background-image: url('../big-pot/E160321_001350.jpg') ; background-repeat
 
 .index-body nav ul li a:link, .index-body nav ul li a:visited {text-decoration: none ;}
 
-.index-body nav ul li a:hover, .index-body nav ul li a:focus { color: #997F51 ; transition: all 0.5s ;}
+.index-body nav ul li a:hover, .index-body nav ul li a:focus { color: #997F51 ; transition: all 0.5s ; outline: none ;}
 
 .index-body nav ul li a::before {
     position: absolute ;
