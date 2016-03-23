@@ -146,7 +146,8 @@ Please use following format :
  
 /* Below is for golfbelt website.*/
 body {background-image: url('../big-pot/E160321_001350.jpg') ; background-repeat: no-repeat ; background-attachment: fixed ;}
-.index-body nav {margin-left: 0 ; margin-right: 0 ; border: 1px solid #444 ;}
+
+.index-body nav {margin-left: 0 ; margin-right: 0 ; border-top: 1px solid #444 ; border-bottom: 1px solid #444 ; background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.15) 30%, rgba(255, 255, 255, 0.15) 70%, rgba(255, 255, 255, 0) 100%) ;}
 
 /* Useless. */
 /*.index-body nav ul {display: block ; padding: 0 ; margin-left: auto ; margin-right: auto ; width: 60% ;}
@@ -157,7 +158,8 @@ body {background-image: url('../big-pot/E160321_001350.jpg') ; background-repeat
 
 
 .index-body nav ul {display: block ; padding: 0 ; margin-left: auto ; margin-right: auto ; width: 60% ;}
-.index-body nav ul li {display: inline-block ; /*border-left: 1px solid grey */; padding-left: 1em ; margin-left: 0em ; margin-right: 1em ; font-size: 1.1em ; letter-spacing: 0.1em ;}
+
+.index-body nav ul li {display: inline-block ; padding-left: 1em ; margin-left: 0em ; margin-right: 1em ; font-size: 1.1em ; letter-spacing: 0.1em ;}
 
 .index-body nav ul li a {display: inline ; position: relative ; vertical-align: bottom ; color: black ;}
 
@@ -219,12 +221,21 @@ nav ul li a:hover {border-bottom: 0 ;}
 .index-body nav ul li:nth-child(1) {border-left: 0 ; padding-left: 1em ; margin-left: 0em ; margin-right: 1em ;}
 
 article {margin: 30px 200px 0 200px ; border-top: 1px solid #DDD ; padding-top: 30px ; padding-bottom: 0 ; }
-article:nth-of-type(1) {border-top: 0 ; margin-top: 45px ;}
-.atc-title {text-align: left ; margin-top: 0 ; margin-bottom: 0 ; float: left ; color: #997F51 ; font-size: 1.5em ; position: relative ;}
-.atc-title::before {position: absolute ; left: -45px ; top: 5px ; content: "" ;  display: inline-block ; width: 30px ; height: 24px ; background-image: url('../images/E160320_230721.png') ; background-repeat: no-repeat ; background-position: ; background-size: 100% 100% ;}
-.atc-date {text-align: left ;  margin-top: 0 ; margin-bottom: 20px  ; float: right ; font-style: italic ; color: #AAA ;}
-.atc-date + * {clear: both ;}
 
-.index-body .atc-image {width: 40% ; display: block ; margin-left: auto ; margin-right: 0 ;}
+article:nth-of-type(1) {border-top: 0 ; margin-top: 45px ;}
+
+.atc-title {text-align: left ; margin-top: 0 ; margin-bottom: 0 ; float: left ; color: #997F51 ; font-size: 1.5em ; position: relative ;}
+
+.atc-title::before {position: absolute ; left: -45px ; top: 5px ; content: "" ;  display: inline-block ; width: 30px ; height: 24px ; background-image: url('../images/E160320_230721.png') ; background-repeat: no-repeat ; background-position: ; background-size: 100% 100% ;}
+
+.atc-date {text-align: left ;  margin-top: 0 ; margin-bottom: 20px  ; float: right ; font-style: italic ; color: #AAA ; margin-left: 100px ;}
+
+.index-body .atc-image {width: 40% ; display: block ; float: right ; clear: right ;}
+
+article p {clear: left ;} 
+
+.clear-both {clear: both ;}
+
 footer {margin: 80px 50px ; border-top : 1px solid #DDD ; text-align: center ;}
+
 footer p { color: #997F51 ; font-size: 0.8em ;}

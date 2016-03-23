@@ -30,8 +30,8 @@
 
 <nav>
     <ul>
-        <li><a href="www.google.com">News</a></li>
-        <li><a href="www.google.com">Product series</a></li>
+        <li><a href="./index.html">News</a></li>
+        <li><a href="./weaver/E160321_025953.html">Product series</a></li>
         <li><a href="www.google.com">Contact us</a></li>
         <li><a href="www.google.com">About golfbelt</a></li>
         <li><a href="www.google.com">Main feature</a></li>
@@ -47,6 +47,8 @@
     <img src="./big-pot/E160320_204421.png" class="atc-image">
     
     <p>A bicycle, often called a bike or cycle, is a human-powered, pedal-driven, single-track vehicle, having two wheels attached to a frame, one behind the other. A bicycle rider is called a cyclist, or bicyclist.</p>
+
+    <p class="clear-both"></p>
     
 </article>
 
