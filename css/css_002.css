@@ -226,7 +226,7 @@ article:nth-of-type(1) {border-top: 0 ; margin-top: 45px ;}
 
 .index-body .atc-image {width: 40% ; display: block ; float: right ; clear: right ;}
 
-article p {clear: left ;} 
+article p {clear: left ;}
 
 .clear-both {clear: both ;}
 
