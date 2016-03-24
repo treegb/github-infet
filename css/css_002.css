@@ -180,7 +180,7 @@ body {background-image: url('../big-pot/E160321_001350.jpg') ; background-repeat
     transform: translate(0px, 0px);
 }
 
-.index-body nav ul li a:hover::before, .index-body nav ul li a:focus::before, .index-body nav ul li a:active::before, {
+.index-body nav ul li a:hover::before, .index-body nav ul li a:focus::before, .index-body nav ul li a:active::before {
     opacity: 1;
     transform: translate(-12px, 0px);
 }
