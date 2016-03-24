@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="./css/css_002.css_disable">
+<link rel="shortcut icon" href="./images/golfbelt-logo.ico">
+<title>foo</title>
+
+<style type="text/css">
+    
+    article {margin: 30px 200px 0 200px ; border-top: 1px solid #DDD ; padding-top: 30px ; padding-bottom: 0 ; }
+    
+    article:nth-of-type(1) {border-top: 0 ; margin-top: 45px ;}
+    
+    .atc-title {text-align: left ; margin-top: 0 ; margin-bottom: 0 ; float: left ; color: #997F51 ; font-size: 1.5em ; position: relative ;}
+    
+    .atc-title::before {position: absolute ; left: -45px ; top: 5px ; content: "" ;  display: inline-block ; width: 30px ; height: 24px ; background-image: url('../images/E160320_230721.png') ; background-repeat: no-repeat ; background-position: ; background-size: 100% 100% ;}
+    
+    .atc-date {text-align: left ;  margin-top: 0 ; margin-bottom: 0px ; float: right ; font-style: italic ; color: #AAA ; margin-left: 100px ;}
+    
+    /*.index-body .atc-image {width: 40% ; display: block ; float: right ; clear: right ;  margin-top: 10px ;}
+    
+    article p {clear: left ;}
+    
+    .clear-both {clear: both ;}*/
+</style>
+
+</head>
+
+<body>
+
+<div class="meta_1">
+    <p class="meta_2">Foo</p>
+    <p class="meta_3">E123456_123456</p>
+</div>
+
+
+<div class="crd">
+
+    <article>
+
+    <p class="atc-title">New buckle are going to out!</p>
+    
+    <p class="atc-date">2016-03-20</p>
+    
+    <!-- <img src="./big-pot/E160320_204421.png" class="atc-image">
+    
+    <p>A bicycle, often called a bike or cycle, is a human-powered, pedal-driven, single-track vehicle, having two wheels attached to a frame, one behind the other. A bicycle rider is called a cyclist, or bicyclist.</p>
+
+    <p class="clear-both"></p> -->
+    
+</article>
+
+    
+</div>
+
+</body>
+</html>

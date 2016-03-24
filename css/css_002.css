@@ -1,3 +1,11 @@
+@font-face {
+    font-family: 'Brotherhood_Script';
+    font-style: normal;
+    font-weight: 900 ;
+    src : url('../fonts/Brotherhood_Script.ttf')  format('truetype')
+        , url('../fonts/Brotherhood_Script.otf')  format('opentype') ;
+}
+
 /* Main structure. */
     body {margin: 0 ; padding : 0 ;}
     .p-gnl {white-space: normal ; line-height: 150% ; margin: 30px 25px auto 25px ; color: #333 ;}    /* No pre. */
@@ -147,7 +155,7 @@ Please use following format :
 /* Below is for golfbelt website.*/
 body {background-image: url('../big-pot/E160321_001350.jpg') ; background-repeat: no-repeat ; background-attachment: fixed ;}
 
-.index-body nav {margin-left: 0 ; margin-right: 0 ; border-top: 1px solid #444 ; border-bottom: 1px solid #444 ; background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.15) 30%, rgba(255, 255, 255, 0.15) 70%, rgba(255, 255, 255, 0) 100%) ;}
+nav {margin-left: 0 ; margin-right: 0 ; border-top: 1px solid #444 ; border-bottom: 1px solid #444 ; background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.15) 30%, rgba(255, 255, 255, 0.15) 70%, rgba(255, 255, 255, 0) 100%) ;}
 
 /* Useless. */
 /*.index-body nav ul {display: block ; padding: 0 ; margin-left: auto ; margin-right: auto ; width: 60% ;}
@@ -157,48 +165,48 @@ body {background-image: url('../big-pot/E160321_001350.jpg') ; background-repeat
 
 
 
-.index-body nav ul {display: block ; padding: 0 ; margin-left: auto ; margin-right: auto ; width: 60% ;}
+nav ul {display: block ; padding: 0 ; margin-left: auto ; margin-right: auto ; width: 60% ;}
 
-.index-body nav ul li {display: inline-block ; padding-left: 1em ; padding-right: 1em ; margin: 0em ; font-size: 1.1em ; letter-spacing: 0.1em ;}
+nav ul li {display: inline-block ; padding-left: 1em ; padding-right: 1em ; margin: 0em ; font-size: 1.1em ; letter-spacing: 0.1em ;}
 
-.index-body nav ul li a {display: inline ; position: relative ; vertical-align: bottom ; color: black ; transition: all 2s ;}
+nav ul li a {display: inline ; position: relative ; vertical-align: bottom ; color: black ; transition: all 2s ;}
 
-.index-body nav ul li a:link, .index-body nav ul li a:visited {text-decoration: none ;}
+nav ul li a:link, .index-body nav ul li a:visited {text-decoration: none ;}
 
-.index-body nav ul li a:hover, .index-body nav ul li a:focus, .index-body nav ul li a:active { color: #997F51 ; transition: all 0.5s ; outline: none ;}
+nav ul li a:hover, .index-body nav ul li a:focus, .index-body nav ul li a:active { color: #997F51 ; transition: all 0.5s ; outline: none ;}
 /* [:active] is for mobile devices. */
 
 /* <a> before. */
-.index-body nav ul li a::before {
+nav ul li a::before {
     position: absolute ;
 	opacity: 0 ;
 	transition: transform 0.3s, opacity 0.2s;
 }
 
-.index-body nav ul li a::before {
+nav ul li a::before {
     content: '[';
     transform: translate(0px, 0px);
 }
 
-.index-body nav ul li a:hover::before, .index-body nav ul li a:focus::before, .index-body nav ul li a:active::before {
+nav ul li a:hover::before, .index-body nav ul li a:focus::before, .index-body nav ul li a:active::before {
     opacity: 1;
     transform: translate(-12px, 0px);
 }
 
 /* <a> after. */
-.index-body nav ul li a::after {
+nav ul li a::after {
     position: absolute ;
 	opacity: 0 ;
 	transition: transform 0.3s, opacity 0.2s;
 	background-color: transparent ;  /* This line is intend to overwrite globle <a> tag effect. */
 }
 
-.index-body nav ul li a::after {
+nav ul li a::after {
     content: ']';
     transform: translate(0px, 0px);
 }
 
-.index-body nav ul li a:hover::after, .index-body nav ul li a:focus::after, .index-body nav ul li a:active::after {
+nav ul li a:hover::after, .index-body nav ul li a:focus::after, .index-body nav ul li a:active::after {
     opacity: 1;
     transform: translate(12px, 0px);
     background-color: transparent ;  /* This line is intend to overwrite globle <a> tag effect. */
@@ -209,6 +217,7 @@ nav ul li a {border-bottom: 0 ;}
 
 nav ul li a:hover {border-bottom: 0 ;}
 
+.current-subpage {color: #997F51 ;}
 
 
 
@@ -222,9 +231,9 @@ article:nth-of-type(1) {border-top: 0 ; margin-top: 45px ;}
 
 .atc-title::before {position: absolute ; left: -45px ; top: 5px ; content: "" ;  display: inline-block ; width: 30px ; height: 24px ; background-image: url('../images/E160320_230721.png') ; background-repeat: no-repeat ; background-position: ; background-size: 100% 100% ;}
 
-.atc-date {text-align: left ;  margin-top: 0 ; margin-bottom: 20px  ; float: right ; font-style: italic ; color: #AAA ; margin-left: 100px ;}
+.atc-date {text-align: left ;  margin-top: 0.3em ; margin-bottom: 10px ; float: right ; font-style: italic ; color: #AAA ; margin-left: 100px ; clear: none ;}
 
-.index-body .atc-image {width: 40% ; display: block ; float: right ; clear: right ;}
+.index-body .atc-image {width: 40% ; display: block ; float: right ; clear: right ;  margin-top: 10px ; border-bottom: 10px solid rgba(255, 255, 255, 0.2) ; border-radius: 30px 0 30px 0 ;}
 
 article p {clear: left ;}
 
@@ -232,4 +241,4 @@ article p {clear: left ;}
 
 footer {margin: 80px 50px ; border-top : 1px solid #DDD ; text-align: center ;}
 
-footer p { color: #997F51 ; font-size: 0.8em ;}
+footer p { color: #997F51 ; font-size: 0.9em ;}
