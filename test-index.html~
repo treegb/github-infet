@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="./css/css_002.css">
+<link rel="stylesheet" href="./css/test-slideshow.css">
+<link rel="shortcut icon" href="./images/golfbelt-logo.ico">
+<title>Index</title>
+
+<style type="text/css">    /* Custom setting for [meta_2]. */
+    .meta_2 {font-family: 'Brotherhood_Script' ; font-size: 5em ; margin-bottom: 0 ; line-height: 100% ;}
+    .meta_3 {line-height: 100% ;}
+</style>
+
+</head>
+
+<body class="index-body">
+
+<div class="meta_1">
+    <p class="meta_2">Belt cavalier</p>
+    <p class="meta_3">Golf Belt International CO., LTD.</p>
+</div>
+
+<nav>
+    <ul>
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./weaver/E160404_200658.html" class="current-subpage">News</a></li>
+        <li><a href="./weaver/E160321_025953.html">Product series</a></li>
+        <li><a href="www.google.com">Contact us</a></li>
+        <li><a href="www.google.com">About golfbelt</a></li>
+        <li><a href="./weaver/E160325_122204.html">Main feature</a></li>
+    </ul>
+</nav>
+
+<div id="container">
+	<ul>
+    
+        <li><img src="./big-pot/E160320_204421.png"></li>
+        <li><img src="./big-pot/E160324_094901.png"></li>
+        <li><img src="./big-pot/E160325_072706.jpg"></li>
+    </ul>
+        <span class="button prevButton"></span>
+        <span class="button nextButton"></span>
+        
+
+</div>
+
+<footer>
+
+    <p>高夫貝爾國際有限公司 82443高雄市燕巢區安林三街12號 (大高雄工業國)<br>
+    TEL : +886-7-614 1445&nbsp;&nbsp;FAX : +886-7-614 1447&nbsp;&nbsp;E-Mail : golfbelt@mail.golfbelt.com.tw<br>
+    版權所有 ⓒ 2011 Golf Belt International Co.,Ltd.All Rights Reserved.<br></p>
+
+</footer>
+
+<script src="../jquery-1.4.2.min.js"></script>
+
+<script>
+$(window).load(function(){
+		var pages = $('#container li'), current=0;
+		var currentPage,nextPage;
+		var handler=function(){
+			$('#container .button').unbind('click');
+			currentPage= pages.eq(current);
+			if($(this).hasClass('prevButton'))
+			{
+				if (current <= 0)
+					current=pages.length-1;
+				else
+					current=current-1;
+			}
+			else
+			{
+
+				if (current >= pages.length-1)
+					current=0;
+				else
+					current=current+1;
+			}
+			nextPage = pages.eq(current);	
+			currentPage.fadeTo('slow',0.3,function(){
+				nextPage.fadeIn('slow',function(){
+					nextPage.css("opacity",1);
+					currentPage.hide();
+					currentPage.css("opacity",1);
+					$('#container .button').bind('click',handler);
+				});	
+			});
+		}
+
+		$('#container .button').click(handler);
+		
+});
+
+</script>
+
+</body>
+</html>

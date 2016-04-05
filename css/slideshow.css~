@@ -1,0 +1,58 @@
+.slideshow_container {
+	position:relative;
+	margin-top: 10px ;
+	margin-left: 0px ;
+	margin-right: 0px ;
+	height:300px;
+	background: rgba(0, 0, 0, 0.7) ;
+}
+
+.slideshow_container_2 {
+    position:relative;
+	width:1024px;
+	height:300px;
+	margin-left: auto ;
+	margin-right: auto ;
+}
+
+.slideshow_container .slideshow_prevButton{
+	height:50px;
+	width:50px;
+	position:absolute;
+	background:url('../big-pot/E160404_190041.png') no-repeat;
+	top:50%;
+	margin-top:-25px;
+	cursor:pointer;
+	z-index:2;
+	left:0
+}
+
+.slideshow_container .slideshow_prevButton:hover{background: url('../big-pot/E160404_190043.png') no-repeat ;}
+
+.slideshow_container .slideshow_nextButton{
+	height:50px;
+	width:50px;
+	position:absolute;
+	background:url('../big-pot/E160404_190042.png') no-repeat;
+	top:50%;
+	margin-top:-25px;
+	cursor:pointer;
+	z-index:2;
+	right:0
+}
+
+.slideshow_container .slideshow_nextButton:hover{background: url('../big-pot/E160404_190044.png') no-repeat ;}
+
+.slideshow_container img:first-child{
+	position: absolute;
+	display: block;
+}
+
+.slideshow_container img{
+	position:absolute;
+	display:none;
+	width: 1024px ;
+	height:300px;
+}
+
+

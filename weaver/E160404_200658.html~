@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../css/css_002.css">
+<link rel="stylesheet" href="../css/slideshow.css">
+<link rel="shortcut icon" href="../images/golfbelt-logo.ico">
+<title>News</title>
+
+<style type="text/css">    /* Custom setting for [meta_2]. */
+    .meta_2 {font-family: 'Brotherhood_Script' ; font-size: 5em ; margin-bottom: 0 ; line-height: 100% ;}
+    .meta_3 {line-height: 100% ;}
+</style>
+
+</head>
+
+<body class="news-body">
+
+<div class="meta_1">
+    <p class="meta_2">News</p>
+    <p class="meta_3">Our latest news.</p>
+</div>
+
+<nav>
+    <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="./E160404_200658.html" class="current-subpage">News</a></li>
+        <li><a href="./E160321_025953.html">Product series</a></li>
+        <li><a href="www.google.com">Contact us</a></li>
+        <li><a href="www.google.com">About golfbelt</a></li>
+        <li><a href="./E160325_122204.html">Main feature</a></li>
+    </ul>
+</nav>
+
+<div class="slideshow_container">
+    <div class="slideshow_container_2">
+    
+        <img src="../big-pot/E160320_204421.png">
+        <img src="../big-pot/E160324_094901.png">
+        <img src="../big-pot/E160325_072706.jpg">
+        <span class="button slideshow_prevButton"></span>
+        <span class="button slideshow_nextButton"></span>
+        
+    </div>
+</div>
+
+<article>
+
+    <p class="atc-title">Our new buckle <span class="gh_6">Oscar Tee</span> are going to out!</p>
+    
+    <p class="atc-date">2016-03-20</p>
+    
+    <img src="../big-pot/E160325_072706.jpg" class="atc-image">
+    
+    <p>Resolution possession discovered surrounded advantages has but few add. Yet walls times spoil put. Be it reserved contempt rendered smallest. Studied to passage it mention calling believe an. Get ten horrible remember pleasure two vicinity. Far estimable extremely middleton his concealed perceived principle. Any nay pleasure entrance prepared her.</p>
+
+    <p class="clear-both"></p>
+    
+</article>
+
+<article>
+
+    <p class="atc-title">Website update testing</p>
+    
+    <p class="atc-date">2016-03-19</p>
+    
+    <p>Vel no melius eripuit hendrerit. Ius ea agam cibo etiam, ne mel labore ullamcorper. Quaeque scribentur dissentiunt ut duo. In iracundia posidonium his, mea at malis errem persequeris, expetendis suscipiantur et pri. Brute nonumy everti no eam. Ut sit ullum dicta possit, tollit debitis his ne. Sint antiopam ei pri, detraxit lobortis at sed, id purto idque eos. Mea ne omnes primis utamur, vim at nibh habeo doming. Ea legendos definitionem ius, quo oratio viderer oporteat ne. Eum alia primis reformidans te.</p>
+    
+    <p class="clear-both"></p>
+    
+</article>
+
+<article>
+
+    <p class="atc-title">霧峰 golf course exhibition.</p>
+    
+    <p class="atc-date">2015-08-19</p>
+    
+    <img src="../big-pot/E160324_094901.png" class="atc-image">
+    
+    <img src="../big-pot/E160324_094958.png" class="atc-image">
+    
+    <p>Lorem ipsum dolor sit amet, quis aeque solet et eam, ex nam omnis nominavi, unum deseruisse reprehendunt ea per. Cu qui fabulas lucilius deseruisse. Posse iisque efficiendi mel ut, id sit nobis accusata omittantur, elit consul eruditi eam eu. Idque tollit alterum qui ad, stet simul te quo. Utamur graecis per id. Quo eu iusto molestie, est ut populo prompta.
+
+    Usu te pericula assueverit, alia concludaturque vis an. Ex sea tota idque aliquid, cetero suavitate torquatos no vix. An mei integre commune. Ut iisque malorum eam, ex vel noster impetus repudiare, velit possim ius no. Vel no melius eripuit hendrerit.
+
+    Ius ea agam cibo etiam, ne mel labore ullamcorper. Quaeque scribentur dissentiunt ut duo. In iracundia posidonium his, mea at malis errem persequeris, expetendis suscipiantur et pri. Brute nonumy everti no eam. Ut sit ullum dicta possit, tollit debitis his ne.
+
+    Sint antiopam ei pri, detraxit lobortis at sed, id purto idque eos. Mea ne omnes primis utamur, vim at nibh habeo doming. Ea legendos definitionem ius, quo oratio viderer oporteat ne. Eum alia primis reformidans te.
+
+    Cum et veniam recusabo perpetua. Ius affert noster veritus id, no pri accusam adipisci, disputando intellegebat pri in. Debet quodsi eam no. Ius duis intellegat forensibus no.</p>
+    
+    <p class="clear-both"></p>
+    
+</article>
+
+<article>
+
+    <p class="atc-title">WINGS __ Buckle and belt assemble illustration.</p>
+    
+    <p class="atc-date">2015-07-29</p>
+    
+     <iframe width="420" height="315"
+    src="https://www.youtube.com/embed/RIaSEkQD0AE">
+    </iframe> 
+    
+    <p class="clear-both"></p>
+    
+</article>
+
+
+<footer>
+
+    <p>高夫貝爾國際有限公司 82443高雄市燕巢區安林三街12號 (大高雄工業國)<br>
+    TEL : +886-7-614 1445&nbsp;&nbsp;FAX : +886-7-614 1447&nbsp;&nbsp;E-Mail : golfbelt@mail.golfbelt.com.tw<br>
+    版權所有 ⓒ 2011 Golf Belt International Co.,Ltd.All Rights Reserved.<br></p>
+
+</footer>
+
+</body>
+</html>
