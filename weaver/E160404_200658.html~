@@ -32,18 +32,6 @@
     </ul>
 </nav>
 
-<div class="slideshow_container">
-    <div class="slideshow_container_2">
-    
-        <img src="../big-pot/E160320_204421.png">
-        <img src="../big-pot/E160324_094901.png">
-        <img src="../big-pot/E160325_072706.jpg">
-        <span class="button slideshow_prevButton"></span>
-        <span class="button slideshow_nextButton"></span>
-        
-    </div>
-</div>
-
 <article>
 
     <p class="atc-title">Our new buckle <span class="gh_6">Oscar Tee</span> are going to out!</p>
