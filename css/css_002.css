@@ -117,8 +117,8 @@
     .gh_5 {color: #D46504 ; font-size: 1.1rem ;}    /* Notice, orange, mark as notice, not to mean error or anything's going wrong. */
     .gh_6 {font-weight: bold ;}    /* Bold, used inside <a> tag or other situation, when don't want to bother the bigger span's format. */
     
-    :target {background-color: #BEE5E8 ; transition: background-color 0.5s ease ;}
-    :target:hover {background-color: #E9F4F5 ;}
+    :target {background: linear-gradient( 90deg, rgba(153, 127, 81, 0.5), rgba(153, 127, 81, 0.1)) ; transition: background-color 0.5s ease ;}
+    :target:hover {background-color: rgba(153, 127, 81, 0.1) ;}
 
 
     
@@ -137,13 +137,13 @@ Please use following format :
 
 /* Text select (mouse drag) color. */
     ::-moz-selection {
-    background: #BEE5E8 ;
-    color: #444 ;
+    background: #444 ;
+    color: #ccc ;
     }
 
     ::selection {
-    background: #BEE5E8 ;
-    color: #444 ;
+    background: #444 ;
+    color: #ccc ;
     }
 
 
