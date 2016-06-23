@@ -25,8 +25,8 @@ all_yarns = document.querySelectorAll(".yarns-link") ;
 
 for ( var i = "0" ; i< all_yarns.length ; i++) {
     var current_testing_element = all_yarns[i] ;
-    current_path = current_testing_element.href ;
-    current_path_yarns = current_path.replace(/^file:\/\//,'yarns://') ;
+    var current_path = current_testing_element.href ;
+    var current_path_yarns = current_path.replace(/^file:\/\//,'yarns://') ;
     
     var yarns_protocol_element = document.createElement('a') ;
     yarns_protocol_element.setAttribute('class', 'yarns-protocol') ;
@@ -58,4 +58,24 @@ function absolute(base, relative) {
             stack.push(parts[i]);
     }
     return stack.join("/");
+}
+
+
+var all_pdtpg_small_pdt = document.querySelectorAll(".pdtpg-small-pdt") ;
+
+for ( var i = 0 ; i < all_pdtpg_small_pdt.length ; i++ ) {
+    var current_pdtpg_small_pdt = all_pdtpg_small_pdt[i] ;
+    var current_pdtpg_small_pdt_href = current_pdtpg_small_pdt.getAttribute("src");
+    var current_pdtpg_small_pdt_href2 = current_pdtpg_small_pdt_href.replace(/^.*[\\\/]/, '') ;
+
+    var tmp1 = current_pdtpg_small_pdt_href2.substring(0, 8) ;
+    var tmp2 = current_pdtpg_small_pdt_href2.substring(8, 14) ;
+    current_pdtpg_small_pdt_href2 = tmp2 ;
+    
+    var pdtpg_small_pdt_a = document.createElement('a') ;
+    pdtpg_small_pdt_a.setAttribute('class', 'small-pdt-href') ;
+    pdtpg_small_pdt_a.setAttribute('href', current_pdtpg_small_pdt_href2) ;
+    
+    var foo_parent = current_pdtpg_small_pdt.parentNode ;
+    foo_parent.insertBefore(pdtpg_small_pdt_a, current_pdtpg_small_pdt.nextSibling) ;
 }

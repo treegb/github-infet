@@ -1,3 +1,5 @@
+@import url(http://fonts.googleapis.com/earlyaccess/notosanstc.css);  /* This line must be in the first line or it will not work! */
+
 @font-face {
     font-family: 'Brotherhood_Script';
     font-style: normal;
@@ -5,6 +7,7 @@
     src : url('../fonts/Brotherhood_Script.ttf')  format('truetype')
         , url('../fonts/Brotherhood_Script.otf')  format('opentype') ;
 }
+
 
 /* Main structure. */
     body {margin: 0 ; padding : 0 ;}
@@ -16,7 +19,7 @@
     .p-mono {font-family: "WenQuanYi Zen Hei Mono" ;}
     .div-gnl {white-space: normal ; line-height: 150% ; margin: 30px 20px ; color: #333 ;}    /* Currently used at some tables. */
     .div-gnl:last-child {margin-bottom: 100px ;}
-    p {margin-top: 1.1em ; margin-bottom: 0 ; color: #CCC ;}    /* Probably the most often used tag. */
+    p {margin-top: 1.1em ; margin-bottom: 0 ; color: #CCC ; font-size: 1.1rem ;}    /* Probably the most often used tag. */
     .pch + p {margin-top: 0 ;}
     .smid {margin-left: 50px ;}    /* Simple indent in <p>, use mostly in s-b-alphabetical, order to pop out the alphabetical. */
     span, p {line-height: 130% ;}    /* If inside [.crd] contain any span, this line might be useful. */
@@ -33,6 +36,8 @@
     margin : 0.1em 10px 0 0 ; padding: 0 0 1em 40px ;
     color: #333 ; white-space: normal ; line-height: 150% ;
     }
+    
+    .crd-tpr {border: 0 ;}
 
 /* Punch. */    
     .pch {display: block ; line-height: 150% ; position: relative ; padding-top: 0px ; margin-top: 1.3em ;}
@@ -59,17 +64,17 @@
 /* Meta always put at the front of article, and never put inside the main [card]! */
     .meta_1 {display: block ; text-align: center ; line-height: 190% ; margin: 25px 300px 30px 300px ; padding-bottom: 2px ; letter-spacing: 0.3em ; text-indent: 2em ;}
 
-    .meta_2 {color: #997F51 ; font-size: 3em ; font-weight: bold ; margin : 0 ; transition: all 0.5s ease ; transform: scale(1.0) ;}
+    .meta_2 {color: #997F51 ; font-size: 5em ; margin : 0 ; font-family: 'Brotherhood_Script' ; line-height: 100% ; transition: all 0.5s ease ; transform: scale(1.0) ;}
     .meta_2:hover {text-shadow: 0 0 0.2em #CCBDA1 ; transform: scale(1.0) ; letter-spacing: 0.04em ;}
 
-    .meta_3 {color: #997F51 ; font-size: 0.7em ; font-weight: bold ; margin : 0 ; transition: all 0.5s ease ; transform: scale(1.0) ;}
+    .meta_3 {color: #997F51 ; font-size: 1em ; font-weight: bold ; margin : 0 ; line-height: 100% ; transition: all 0.5s ease ; transform: scale(1.0) ;}
     .meta_3:hover {color: #BBB ; transform: scale(1.0) ; letter-spacing: 0.37em ;}
     
     
 /* Hyperlinks and highlights. */
     p a {display: inline; position: relative ; vertical-align: bottom ; transition: border 0s ease 0s ; border-bottom: 0 solid rgba(50,50,50,1) ; }    /* [transform] need to display block or inlinblock ,; [a::after rely on this to work.] */
     
-    p a:link, p a:visited  {color: #997F51 ; text-decoration: none ; /*transition: all 0.5s ease 0s ; */}    /* Main hyperlink, [weaver] or external link. */
+    p a:link, p a:visited  {color: #BD5500 ; text-decoration: none ; /*transition: all 0.5s ease 0s ; */}    /* Main hyperlink, [weaver] or external link. */
     /*a:hover {animation: hyperlink_animation 0.6s ; transform: scale(1.2) ; transform-origin: 30% 50% ; z-index: 2 ; background-color: rgba(255, 255, 255, 0.5) ;}
         @keyframes hyperlink_animation{
         0% {transform: translate(0) ; z-index: 2 ; background-color: rgba(255, 255, 255, 0.6) ;}
@@ -114,8 +119,19 @@
     .gh_3 {color: #28822A ; background-color: #EEE ; font-size: 1.1rem ;}    /* Highlight, like [gh_1] but with a little grey bg-, main title of multiple [gh_1] "children".
     __ Used when there are too many highlight_1, and you want to emphasise the "parent" title more.*/
     .gh_4 {color: #D63A3A ; font-size: 1.1rem ;}    /* Warning, red, indicate here might be something wrong, or mark as strong .notice ,,warning. */
-    .gh_5 {color: #D46504 ; font-size: 1.1rem ;}    /* Notice, orange, mark as notice, not to mean error or anything's going wrong. */
+    .gh_5 {color: #997F51 ; font-size: 1.1rem ;}    /* Notice, orange, mark as notice, not to mean error or anything's going wrong. */
     .gh_6 {font-weight: bold ;}    /* Bold, used inside <a> tag or other situation, when don't want to bother the bigger span's format. */
+    
+    .gh_7 {background-color: #E9F4F5 ;}  /* Quote. Used when a quotation from other source, or Linux command. See more code in user custom css. */
+        p.gh_7 {border-radius: 10px ; margin-right: 20px ; position: relative ; padding: 5px 30px ;}
+        p.gh_7::before {color: #8DBDC2 ;}
+        p.gh_7::after {color: #8DBDC2 ;}
+
+        span.gh_7 {border-radius: 5px ; position: relative ;}
+        span.gh_7::before {color: #8DBDC2 ;}
+        span.gh_7::after {color: #8DBDC2 ;}
+    
+    .gh_8 {color: rgba(204, 204, 204, 0.5) ;}  /* Unimportant content. Fade out intended. */
     
     :target {background: linear-gradient( 90deg, rgba(153, 127, 81, 0.5), rgba(153, 127, 81, 0.1)) ; transition: background-color 0.5s ease ;}
     :target:hover {background-color: rgba(153, 127, 81, 0.1) ;}
@@ -222,6 +238,7 @@ nav ul li a:hover {border-bottom: 0 ;}
 
 
 
+.pdtpg-body {margin: 30px 50px auto ;}
 
 article {margin: 30px 200px 0 200px ; border-top: 1px solid #DDD ; padding-top: 30px ; padding-bottom: 0 ; }
 
@@ -240,3 +257,27 @@ article:nth-of-type(1) {border-top: 0 ; margin-top: 45px ;}
 footer {margin: 80px 50px ; border-top : 1px solid #DDD ; text-align: center ;}
 
 footer p { color: #997F51 ; font-size: 0.9em ;}
+
+h1, h2, h3, h4, h5, h6  {text-align: center ; color: #997F51 ; font-family: 'Noto Sans TC', 'Noto Sans Mono CJK TC Regular' ; font-weight: 300 ;}
+
+.pdtpg-big-title {font-size: 1.8em ; letter-spacing: 0.2em ; border-bottom: 1px solid #777 ; margin-top: 30px ;  margin-bottom: 50px; line-height: 160%}
+
+.pdtpg-pdt-ctn {}
+
+.pdtpg-pdt-ctn + * {clear: left ; margin-top: 0px ; margin-top: 20px ;}
+
+.pdtpg-main-pdt-ctn {position: relative ; width: 550px ; height: 400px ; margin: 0 auto -50px ; z-index: -1}
+
+.pdtpg-main-pdt {display : block ; position: absolute ; width: 450px ; height: 300px ; margin: 50px ; box-shadow: 0 0 50px #fff ; top: 0px ; left: 0px ;}  /* Real image size :: pdt page : 1920 x 1280, link image : 1920 x 1280 */
+
+.pdtpg-small-pdt-ctn1 {/*overflow: auto*/ ; position: relative ; float: right ; right: 50% ;}
+
+.pdtpg-small-pdt-ctn2 {position: relative ; left: 50% ; margin: 0 ; padding: 0 ;}
+
+.pdtpg-small-pdt-ctn3 {display : block ; float: left ; width: 150px ; height: 100px ; margin: 20px 0 0 0 ; position: relative ;}
+
+.pdtpg-small-pdt {width: 150px ; height: 100px ;}  /* Real image size :: pdt page : 300 x 200, link image : 1920 x 1280 */
+
+.small-pdt-href {background-image: url("../images/E160623_124147.png") ; width: 40px ; height: 40px ; background-size: 100% 100% ; background-repeat: no-repeat ; background-position: 100% 100% ; color: red ; position: absolute ; right: 5px ; bottom: 5px ; outline: none ; opacity: 0.3 ;}
+
+.clearer {clear: both ;}

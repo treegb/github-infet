@@ -11,6 +11,8 @@
     .meta_2 {font-family: 'Brotherhood_Script' ; font-size: 5em ; margin-bottom: 0 ; line-height: 100% ;}
     .meta_3 {line-height: 100% ;}
     article p {clear: left ;}
+    
+    #facebook_f, #facebook_like {display: inline-block ; margin-left: 1em ; margin-right: 1em ;}
 </style>
 
 </head>
@@ -33,6 +35,10 @@
     </ul>
 </nav>
 
+<article>
+<p>Please visit our<a href="https://www.facebook.com/pages/Golf-belt-%E9%AB%98%E5%A4%AB%E8%B2%9D%E7%88%BE/135496933155444"><img src="../big-pot/E160622_093315.png" alt="facebook icon" id="facebook_f"></a> and <img src="../big-pot/E160622_100542.png" alt="facebook icon"  id="facebook_like" height="50px"> us!</p>
+</article>
+<!--
 <article>
 
     <p class="atc-title">Our new buckle <span class="gh_6">Oscar-Tee</span> are going to out!</p>
@@ -96,7 +102,27 @@
     <p class="clear-both"></p>
     
 </article>
+-->
+<script type="text/javascript" src="../javascript/jquery.js"></script>
 
+<script type="text/javascript">
+    
+        $('#facebook_f').on('mouseenter', function () {
+            $(this).attr('src', '../big-pot/E160622_093316.png') ;
+        }) ;
+        
+        $('#facebook_f').on('mouseleave', function () {
+            $(this).attr('src', '../big-pot/E160622_093315.png') ;
+        }) ;
+        
+        $('#facebook_like').on('mouseenter', function () {
+            $(this).attr('src', '../big-pot/E160622_100543.png') ;
+        }) ;
+        
+        $('#facebook_like').on('mouseleave', function () {
+            $(this).attr('src', '../big-pot/E160622_100542.png') ;
+        }) ;
+</script>
 
 <footer>
 
