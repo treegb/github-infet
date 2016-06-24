@@ -260,24 +260,28 @@ footer p { color: #997F51 ; font-size: 0.9em ;}
 
 h1, h2, h3, h4, h5, h6  {text-align: center ; color: #997F51 ; font-family: 'Noto Sans TC', 'Noto Sans Mono CJK TC Regular' ; font-weight: 300 ;}
 
-.pdtpg-big-title {font-size: 1.8em ; letter-spacing: 0.2em ; border-bottom: 1px solid #777 ; margin-top: 30px ;  margin-bottom: 50px; line-height: 160%}
+.pdtpg-bigtitle {font-size: 1.8em ; letter-spacing: 0.2em ; border-bottom: 1px solid #777 ; margin-top: 30px ;  margin-bottom: 50px; line-height: 160%}
 
 .pdtpg-pdt-ctn {}
 
 .pdtpg-pdt-ctn + * {clear: left ; margin-top: 0px ; margin-top: 20px ;}
 
-.pdtpg-main-pdt-ctn {position: relative ; width: 550px ; height: 400px ; margin: 0 auto -50px ; z-index: -1}
+.pdtpg-pdt-main-ctn {position: relative ; width: 550px ; height: 400px ; margin: 0 auto -50px ; z-index: -1}
 
-.pdtpg-main-pdt {display : block ; position: absolute ; width: 450px ; height: 300px ; margin: 50px ; box-shadow: 0 0 50px #fff ; top: 0px ; left: 0px ;}  /* Real image size :: pdt page : 1920 x 1280, link image : 1920 x 1280 */
+.pdtpg-pdt-main {display : block ; position: absolute ; width: 450px ; height: 300px ; margin: 50px ; box-shadow: 0 0 50px #fff ; top: 0px ; left: 0px ;}  /* Real image size :: pdt page : 1920 x 1280, link image : 1920 x 1280 */
 
-.pdtpg-small-pdt-ctn1 {/*overflow: auto*/ ; position: relative ; float: right ; right: 50% ;}
+.pdtpg-pdt-small-ctn1 {/*overflow: auto*/ ; position: relative ; float: right ; right: 50% ;}
 
-.pdtpg-small-pdt-ctn2 {position: relative ; left: 50% ; margin: 0 ; padding: 0 ;}
+.pdtpg-pdt-small-ctn2 {position: relative ; left: 50% ; margin: 0 ; padding: 0 ;}
 
-.pdtpg-small-pdt-ctn3 {display : block ; float: left ; width: 150px ; height: 100px ; margin: 20px 0 0 0 ; position: relative ;}
+.pdtpg-pdt-small-ctn3 {display : block ; float: left ; width: 150px ; height: 100px ; margin: 20px 0 0 0 ; position: relative ;}
 
-.pdtpg-small-pdt {width: 150px ; height: 100px ;}  /* Real image size :: pdt page : 300 x 200, link image : 1920 x 1280 */
+.pdtpg-pdt-small {width: 150px ; height: 100px ;}  /* Real image size :: pdt page : 300 x 200, link image : 1920 x 1280 */
 
-.small-pdt-href {background-image: url("../images/E160623_124147.png") ; width: 40px ; height: 40px ; background-size: 100% 100% ; background-repeat: no-repeat ; background-position: 100% 100% ; color: red ; position: absolute ; right: 5px ; bottom: 5px ; outline: none ; opacity: 0.3 ;}
+.pdt-small-href {background-image: url("../images/E160623_124147.png") ; width: 40px ; height: 40px ; background-size: 100% 100% ; background-repeat: no-repeat ; background-position: 100% 100% ; color: red ; position: absolute ; right: 5px ; bottom: 5px ; outline: none ; opacity: 0.3 ; transition: all 0.5s ease }
+
+.pdt-small-href:active {opacity: 0.13 ; transform: translate(0px, -3px) ;}
+.pdt-small-href:hover {opacity: 0.13 ; transform: translate(0px, -3px) ;}
+
 
 .clearer {clear: both ;}

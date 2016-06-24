@@ -68,7 +68,11 @@ for ( var i = 0 ; i < all_pdtpg_pdt_small.length ; i++ ) {
     var current_pdtpg_pdt_small_href = current_pdtpg_pdt_small.getAttribute("src");
     var current_pdtpg_pdt_small_href2 = current_pdtpg_pdt_small_href.replace(/^.*[\\\/]/, '') ;
 
-    current_pdtpg_pdt_small_href2 = "../pdtpg-pdt-big/" + current_pdtpg_pdt_small_href2 ;
+    var tmp1 = current_pdtpg_pdt_small_href2.substring(0, 8) ;
+    var tmp2 = current_pdtpg_pdt_small_href2.substring(8, 14) ;
+    var tmp3 = current_pdtpg_pdt_small_href2.substring(14);
+    tmp2 = parseInt(tmp2, 10) - "1" ;
+    current_pdtpg_pdt_small_href2 = "../big-pot/" + tmp1 + tmp2 + tmp3 ;
     
     var pdtpg_pdt_small_a = document.createElement('a') ;
     pdtpg_pdt_small_a.setAttribute('class', 'pdt-small-href') ;
