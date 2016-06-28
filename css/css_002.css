@@ -105,6 +105,10 @@
     
     p a:focus {outline: none; border: dotted #BBB 0px ; border-bottom: 4px solid rgba(220,220,220,1) ;}
     
+    /* This two line will clear .back-icon_p dynamic "underline" feature when hovering. */
+    .back-icon_p a:hover {border-bottom: 0 ;}
+    .back-icon_p a::after {height: 0px ;}
+    
     .yarns-link, .yarns-link:link, .yarns-link:visited  {color: #825B17 ; text-decoration: none ;}    /* Hyperlink, [yanrs]. .[yarns-link:visited] don't effect, don't know why. */
     
     .yarns-link_2 {/* Do nothing, this class just a mark when a yarn be linked twice or more. */}
@@ -294,7 +298,10 @@ h1, h2, h3, h4, h5, h6  {text-align: center ; color: #997F51 ; font-family: 'Not
 .clearer {clear: both ;}
 
 .gnl-use-img_ctn_restrict-main-width {width: 90% ; margin: auto ;}
-.gnl-use-img_ctn1 {position: relative ; float: right ; right: 50% ;}
+.gnl-use-img_ctn1 {position: relative ; float: right ; right: 50% ; margin: 40px 0 ;}
 .gnl-use-img_ctn2 {position: relative ; left: 50% ; }
 .gnl-use-img_ctn3 {float: left ; display: inline-block ; line-height: 0 ;}
 .gnl-use-img {margin: 2px 0px ;}
+
+.back-icon_p {text-align: center ; position: relative ; margin-top: 50px ;}
+.back-icon_img {width: 70px ; vertical-align: bottom ; display: inline-block ; position: relative ; top: 15px ; left: 0px ;}

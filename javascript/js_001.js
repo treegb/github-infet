@@ -77,3 +77,21 @@ for ( var i = 0 ; i < all_pdtpg_pdt_small.length ; i++ ) {
     var foo_parent = current_pdtpg_pdt_small.parentNode ;
     foo_parent.insertBefore(pdtpg_pdt_small_a, current_pdtpg_pdt_small.nextSibling) ;
 }
+
+var all_back_icon = document.querySelectorAll(".back-icon_img") ;
+
+function back_icon_hover() {
+
+    for ( var i = 0 ; i < all_back_icon.length ; i++ ) {
+        all_back_icon[i].setAttribute('src', '../big-pot/E160628_142340.png') ;
+    }
+
+}
+
+function back_icon_unhover() {
+
+    for ( var i = 0 ; i < all_back_icon.length ; i++ ) {
+            all_back_icon[i].setAttribute('src', '../big-pot/E160628_142339.png') ;
+    }
+
+}
