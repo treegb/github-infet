@@ -272,11 +272,11 @@ footer p { color: #997F51 ; font-size: 0.9em ;}
 
 h1, h2, h3, h4, h5, h6  {text-align: center ; color: #997F51 ; font-family: 'Noto Sans TC', 'Noto Sans Mono CJK TC Regular' ; font-weight: 300 ;}
 
-.pdtpg-bigtitle {font-size: 1.8em ; letter-spacing: 0.2em ; border-bottom: 1px solid #777 ; margin-top: 100px ;  margin-bottom: 120px; line-height: 160%}
+.pdtpg-bigtitle {font-size: 1.8em ; letter-spacing: 0.2em ; border-bottom: 1px solid #777 ; margin-top: 100px ;  margin-bottom: 120px; line-height: 160% ; position: relative ;}
 
 .pdtpg-pdt-ctn {}
 
-.pdtpg-pdt-ctn + * {margin-top: 0px ; margin-top: 20px ;}
+.pdtpg-pdt-ctn + * {}
 
 .pdtpg-pdt-main-ctn {position: relative ; width: 450px ; height: 300px ; margin: 0 auto 26px ; z-index: -1 ;}
 
@@ -295,7 +295,7 @@ h1, h2, h3, h4, h5, h6  {text-align: center ; color: #997F51 ; font-family: 'Not
 .pdt-small-href:active {opacity: 0.13 ; transform: translate(0px, -3px) ;}
 .pdt-small-href:hover {opacity: 0.13 ; transform: translate(0px, -3px) ;}
 
-.clearer {clear: both ;}
+.clearer {clear: both ; margin: 0;}
 
 .gnl-use-img_ctn_restrict-main-width {width: 90% ; margin: auto ;}
 .gnl-use-img_ctn1 {position: relative ; float: right ; right: 50% ; margin: 40px 0 ;}
@@ -305,3 +305,8 @@ h1, h2, h3, h4, h5, h6  {text-align: center ; color: #997F51 ; font-family: 'Not
 
 .back-icon_p {text-align: center ; position: relative ; margin-top: 50px ;}
 .back-icon_img {width: 70px ; vertical-align: bottom ; display: inline-block ; position: relative ; top: 15px ; left: 0px ;}
+
+.type-icon-ctn_1 {display: inline-block ; position: absolute ; right: 0 ; bottom: -80px ; line-height: 0 ; margin-right: 10px ;}
+.type-icon-ctn_2 {display: inline-block ; padding: 0 10px ; margin: 0 ; border-right: 1px solid #997F51 ; line-height: 0 ;}
+.type-icon-ctn_2:last-child {border-right: 0 ;}
+.type-icon {display: inline-block ; height: 70px ;}
