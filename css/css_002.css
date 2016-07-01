@@ -62,12 +62,12 @@
     .pch-cls + .pch.pch_2 {margin-top: 1em ;}    /* Set the "spacing" after [crd]. */
 
 /* Meta always put at the front of article, and never put inside the main [card]! */
-    .meta_1 {display: block ; text-align: center ; line-height: 190% ; margin: 25px 300px 30px 300px ; padding-bottom: 2px ; letter-spacing: 0.3em ; text-indent: 2em ;}
+    .meta_1 {display: block ; text-align: center ; line-height: 190% ; margin: 25px auto 30px auto ; padding-bottom: 2px ; letter-spacing: 0.3em ; text-indent: 2em ;}
 
-    .meta_2 {color: #997F51 ; font-size: 5em ; margin : 0 ; font-family: 'Brotherhood_Script' ; line-height: 100% ; transition: all 0.5s ease ; transform: scale(1.0) ;}
+    .meta_2 {color: #997F51 ; font-size: 5em ; margin-bottom : 10px ; font-family: 'Brotherhood_Script' ; line-height: 100% ; transition: all 0.5s ease ; transform: scale(1.0) ;}
     .meta_2:hover {text-shadow: 0 0 0.2em #CCBDA1 ; transform: scale(1.0) ; letter-spacing: 0.04em ;}
 
-    .meta_3 {color: #997F51 ; font-size: 1em ; font-weight: bold ; margin : 0 ; line-height: 100% ; transition: all 0.5s ease ; transform: scale(1.0) ;}
+    .meta_3 {color: #997F51 ; font-size: 0.8em ; font-weight: bold ; margin : 0 ; line-height: 100% ; transition: all 0.5s ease ; transform: scale(1.0) ;}
     .meta_3:hover {color: #BBB ; transform: scale(1.0) ; letter-spacing: 0.37em ;}
     
     
@@ -193,7 +193,7 @@ nav {margin-left: 0 ; margin-right: 0 ; border-top: 1px solid #444 ; border-bott
 
 
 
-nav ul {display: block ; padding: 0 ; margin-left: auto ; margin-right: auto ; width: 60% ;}
+nav ul {display: block ; padding: 0 ; margin-left: auto ; margin-right: auto ; width: 70% ;}
 
 nav ul li {display: inline-block ; padding-left: 1em ; padding-right: 1em ; margin: 0em ; font-size: 1.1em ; letter-spacing: 0.1em ;}
 
